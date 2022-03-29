@@ -33,7 +33,7 @@ function TrainerDash({registry}) {
         <div className="App">
           <div className="logoSec">
             <img className="logo" src={fdmLogo} alt="Image Failed To Load" />
-            <h1>Training and Scheduling</h1>
+            <h1>Trainer Dashboard</h1>
           </div>
         <TrainerLoginForm Login={login}></TrainerLoginForm>
         </div>

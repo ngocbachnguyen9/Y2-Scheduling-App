@@ -43,7 +43,7 @@ function StaffDash({registry}) {
         <div className="App">
           <div className="logoSec">
             <img className="logo" src={fdmLogo} alt="Image Failed To Load" />
-            <h1>Training and Scheduling</h1>
+            <h1>Scheduling Staff Dashboard</h1>
           </div>
         <StaffLoginForm Login={login}></StaffLoginForm>
         </div>

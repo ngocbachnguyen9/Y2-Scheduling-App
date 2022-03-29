@@ -20,7 +20,6 @@ function TrainerLoginForm({Login}) {
 
     return(
         <div className="form-container">
-            <h1>Trainer Login</h1>
             <form className="form" onSubmit={handleSubmit}>
                 <div className="input-container">
                     <input type="email" name="email" onChange={handleChangeEmail} required></input>

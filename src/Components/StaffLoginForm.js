@@ -20,7 +20,6 @@ function StaffLoginForm({Login}) {
 
     return(
         <div className="form-container">
-            <h1>Staff Login</h1>
             <form className="form" onSubmit={handleSubmit}>
                 <div className="input-container">
                     <input type="number"  name="ID" id="IDNumber" onChange={handleChangeID} required></input>
