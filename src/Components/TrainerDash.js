@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import TrainerLoginForm from "./TrainerLoginForm";
+import fdmLogo from '../assets/fdm_Logo.png';
 
 function TrainerDash({registry}) {
 
@@ -13,8 +14,7 @@ function TrainerDash({registry}) {
         break;
       }
     }
-    document.getElementById("IDNumber").style.backgroundColor="red";
-    document.getElementById("pword").style.backgroundColor="red";
+    document.getElementById("submit").value = "Incorrect Details. Try Again"
   }
 
   const logout = () => {
@@ -30,7 +30,13 @@ function TrainerDash({registry}) {
           <button onClick={logout}>Logout</button>
         </div>
       ) : (
+        <div className="App">
+          <div className="logoSec">
+            <img className="logo" src={fdmLogo} alt="Image Failed To Load" />
+            <h1>Training and Scheduling</h1>
+          </div>
         <TrainerLoginForm Login={login}></TrainerLoginForm>
+        </div>
       )}
     </div>
   );

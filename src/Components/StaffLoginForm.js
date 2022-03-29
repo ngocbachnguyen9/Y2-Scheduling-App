@@ -19,20 +19,22 @@ function StaffLoginForm({Login}) {
     }
 
     return(
-        <div>
+        <div className="form-container">
             <h1>Staff Login</h1>
-            <form id="loginform" onSubmit={handleSubmit}>
-                <fieldset>
-                    <label for="ID">ID</label>
-                    <br></br>
-                    <input type="number" id="IDNumber" name="ID" onChange={handleChangeID} value={loginDetails.ID} required></input>
-                    <br></br>
-                    <label for="pword">Password </label>
-                    <br></br>
-                    <input type="password" id="pword" name="pword" onChange={handleChangePassword} value={loginDetails.password} required></input>
-                    <br></br>
-                    <input id = "login" type="submit" value="Log In"></input>
-                </fieldset>
+            <form className="form" onSubmit={handleSubmit}>
+                <div className="input-container">
+                    <input type="number"  name="ID" id="IDNumber" onChange={handleChangeID} required></input>
+                    <span></span>
+                    <label>ID</label>
+                </div>
+                <div className="input-container">
+                    <input type="password"  name="pass" id="pword" onChange={handleChangePassword} required></input>
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                <div className="submit-container">
+                    <input id="submit" className = "submit-button" type="submit" value="Log In"></input>
+                </div>
             </form>
         </div>
     );

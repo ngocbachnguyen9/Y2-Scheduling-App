@@ -19,20 +19,22 @@ function TrainerLoginForm({Login}) {
     }
 
     return(
-        <div>
+        <div className="form-container">
             <h1>Trainer Login</h1>
-            <form id="loginform" onSubmit={handleSubmit}>
-                <fieldset>
-                    <label for="email">Email</label>
-                    <br></br>
-                    <input type="email" id="email" name="email" onChange={handleChangeEmail} value={loginDetails.ID} required></input>
-                    <br></br>
-                    <label for="pword">Password </label>
-                    <br></br>
-                    <input type="password" id="pword" name="pword" onChange={handleChangePassword} value={loginDetails.password} required></input>
-                    <br></br>
-                    <input id = "login" type="submit" value="Log In"></input>
-                </fieldset>
+            <form className="form" onSubmit={handleSubmit}>
+                <div className="input-container">
+                    <input type="email" name="email" onChange={handleChangeEmail} required></input>
+                    <span></span>
+                    <label>Email</label>
+                </div>
+                <div className="input-container">
+                    <input type="password" name="pass" onChange={handleChangePassword} required></input>
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                <div className="submit-container">
+                    <input id="submit" className = "submit-button" type="submit" value="Log In"></input>
+                </div>
             </form>
         </div>
     );
