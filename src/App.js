@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
+import LoginForm from './components/LoginForm.js';
+import fdmLogo from './assets/fdm_Logo.png'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="logoSec">
+        <img className="logo" src={fdmLogo} alt="Image Failed To Load" />
+        <h1>Training and Scheduling</h1>
+      </div>
+      <LoginForm />
     </div>
   );
 }
