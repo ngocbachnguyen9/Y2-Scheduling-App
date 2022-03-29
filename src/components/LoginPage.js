@@ -35,7 +35,7 @@ const LoginPage = () => {
                       }
                     },
                     "opacity": {
-                      "value": 0.48927153781200905,
+                      "value": 0.49,
                       "random": false,
                       "anim": {
                         "enable": true,
@@ -56,10 +56,7 @@ const LoginPage = () => {
                     },
                     "line_linked": {
                       "enable": false,
-                      "distance": 150,
-                      "color": "#ffffff",
-                      "opacity": 0.4,
-                      "width": 1
+                      "distance": 150
                     },
                     "move": {
                       "enable": true,
