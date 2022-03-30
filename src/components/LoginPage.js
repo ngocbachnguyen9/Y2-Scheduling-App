@@ -1,9 +1,23 @@
-import React from 'react';
-import LoginForm from './LoginForm.js';
 import fdmLogo from '../assets/fdm_Logo2.png'
 import Particles from 'react-tsparticles';
+import { useState } from 'react';
 
-const LoginPage = () => {
+const LoginPage = ({ userType, changeUserType }) => {
+
+  const [usd, setUsd] = useState(userType);
+  
+
+  const userTypeHandler = e => {
+
+    if(usd === "T"){
+      setUsd("S")
+    }
+    else{
+      setUsd("T")
+    }
+    changeUserType(usd);
+  }
+
     return (
         <div className="loginPageStuff">
             <Particles 
@@ -117,8 +131,28 @@ const LoginPage = () => {
             <div className="logoSec">
                 <img className="logo" src={fdmLogo} alt="" />
                 <h2>Training and Scheduling</h2>
+                <h3>{usd}</h3>
             </div>
-            <LoginForm />
+            <div className="form-container">
+            <form>
+                <div className="form">
+                    <div className="input-container">
+                        <input type="email" name="email" required />
+                        <span></span>
+                        <label>Email</label>
+                    </div>
+                    <div className="input-container">
+                        <input type="password" name="pass" required />
+                        <span></span>
+                        <label>Password: </label>
+                    </div>
+                    <div className="button-container">
+                        <input className="submit-button" type="submit" value="Login" />
+                    </div>
+                </div>
+            </form>
+            <button onClick={userTypeHandler}>change</button>
+        </div>
         </div>
     )
 }

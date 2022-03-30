@@ -1,6 +1,7 @@
 import React from 'react'
 
-const LoginForm = () => {
+const LoginForm = ({userType}) => {
+    
     return (
         <div className="form-container">
             <form>
@@ -21,7 +22,6 @@ const LoginForm = () => {
                 </div>
 
             </form>
-            <a href="">Staff Login</a>
         </div>
     )
 }

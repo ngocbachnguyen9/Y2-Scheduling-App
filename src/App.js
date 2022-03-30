@@ -7,10 +7,16 @@ function App() {
 
   const[registry] = useState(new Registry());
 
+  const [userType,setUserType] = useState("T");
+
+  const changeUserType = (type) =>{
+    setUserType(type)
+  }
+ 
   return (
     
     <div className="app">
-      <LoginPage />
+      <LoginPage userType={userType} changeUserType = {changeUserType}/>
     </div>
   );
 }
