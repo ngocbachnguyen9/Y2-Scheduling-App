@@ -54,6 +54,7 @@ body {
 
 .input-container input {
     width: 100%;
+    color: #e9f4fb;
     padding: 0 5px;
     height: 40px;
     font-size: 16px;
@@ -96,6 +97,7 @@ body {
 }
 
 .submit-button {
+    position: relative;
     width: 100%;
     height: 50px;
     border: 1px solid;
