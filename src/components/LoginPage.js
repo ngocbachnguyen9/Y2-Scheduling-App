@@ -115,7 +115,7 @@ const LoginPage = () => {
             }
             />
             <div className="logoSec">
-                <img className="logo" src={fdmLogo} alt="Image Failed To Load" />
+                <img className="logo" src={fdmLogo} alt="" />
                 <h2>Training and Scheduling</h2>
             </div>
             <LoginForm />
