@@ -27,6 +27,7 @@ body {
 }
 
 .form-container {
+    position: relative;
     height: 240px;
     width: 400px;
     padding: 1em;

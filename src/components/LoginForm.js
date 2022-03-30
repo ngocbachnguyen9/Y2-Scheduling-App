@@ -21,6 +21,7 @@ const LoginForm = () => {
                 </div>
 
             </form>
+            <a href="">Staff Login</a>
         </div>
     )
 }
