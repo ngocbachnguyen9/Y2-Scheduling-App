@@ -4,7 +4,6 @@ const Menu = () => {
 	return (
 		<>
 			<div className='Menu'>
-				<h1>Navigation</h1>
 				<nav>
 					<ul>
 						<li>
