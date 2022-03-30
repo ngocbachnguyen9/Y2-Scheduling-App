@@ -20,7 +20,7 @@ const LoginPage = () => {
                       "value": "#ffffff"
                     },
                     "shape": {
-                      "type": "circle",
+                      "type": "polygon",
                       "stroke": {
                         "width": 0,
                         "color": "#000000"
@@ -61,9 +61,7 @@ const LoginPage = () => {
                     "move": {
                       "enable": true,
                       "speed": 0.2,
-                      "direction": "none",
                       "random": true,
-                      "straight": false,
                       "out_mode": "out",
                       "bounce": false,
                       "attract": {

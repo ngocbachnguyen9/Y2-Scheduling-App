@@ -3,22 +3,26 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: linear-gradient(rgb(0, 1, 51) 0%, rgb(15, 16, 72) 100%);
-    ;
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
 }
 
-.loginPageStuff {
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.App {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    height: 100vh;
+    height: 99.5vh;
     align-items: center;
 }
 
 .logoSec {
     text-align: center;
-    color: white;
-    font-size: 1em;
 }
 
 .logo {
@@ -80,14 +84,14 @@ body {
     left: 0;
     width: 0%;
     height: 2px;
-    background: linear-gradient(90deg, #4427fa 30%, #8080f7 100%);
+    background: #2691d9;
     transition: .5s;
 }
 
 .input-container input:focus~label,
 .input-container input:valid~label {
     top: -5px;
-    color: #4427fa;
+    color: #2691d9;
 }
 
 .input-container input:focus~span::before,
@@ -99,28 +103,23 @@ body {
     width: 100%;
     height: 50px;
     border: 1px solid;
-    background: linear-gradient(90deg, #4427fa 30%, #8080f7 100%);
+    background: #2691d9;
     border-radius: 25px;
     font-size: 18px;
     color: #e9f4fb;
-    border: solid #8080f7;
     font-weight: 700;
     cursor: pointer;
     outline: none;
 }
 
 .submit-button:hover {
-    background-color: linear-gradient(90deg, #4427fa 30%, #8080f7 100%);
-    border: #4427fa;
+    cursor: pointer;
+    border-color: #2691d9;
     transition: .5s;
 }
 
 @media (max-width: 700px) {
-    .loginPageStuff {
+    .App {
         flex-direction: column;
-    }
-    .logo {
-        height: 40vw;
-        width: 64vw;
     }
 }
