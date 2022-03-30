@@ -10,7 +10,7 @@ function StaffDash({registry}) {
   const login = (details) => {
     const allStaff = registry.getAllStaff();
     for(let i = 0; i < allStaff.length; i++){
-      if (details.ID == allStaff[i].getID() && details.password == allStaff[i].getPassword()){
+      if (details.ID === allStaff[i].getID() && details.password === allStaff[i].getPassword()){
         setStaff(allStaff[i])
         break;
       }
@@ -41,9 +41,9 @@ function StaffDash({registry}) {
           <button onClick={logout}>Logout</button>
         </div>
       ) : (
-        
+
         <div className="loginPageStuff">
-          <Particles 
+          <Particles
             options={{
                 "particles": {
                     "number": {

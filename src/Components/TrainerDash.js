@@ -10,7 +10,7 @@ function TrainerDash({registry}) {
   const login = (details) => {
     const allTrainers = registry.getAllTrainers();
     for(let i = 0; i < allTrainers.length; i++){
-      if (details.email == allTrainers[i].getEmail() && details.password == allTrainers[i].getPassword()){
+      if (details.email === allTrainers[i].getEmail() && details.password === allTrainers[i].getPassword()){
         setTrainer(allTrainers[i]);
         break;
       }
@@ -27,12 +27,12 @@ function TrainerDash({registry}) {
       {(trainer !== null) ? (
         <div>
           <h1>Welcome, {trainer.getFullName()}</h1>
-          <button>View Timetable</button>  
+          <button>View Timetable</button>
           <button onClick={logout}>Logout</button>
         </div>
       ) : (
         <div className="loginPageStuff">
-          <Particles 
+          <Particles
             options={{
                 "particles": {
                     "number": {

@@ -3,7 +3,7 @@ class Trainer{
     #firstName;
     #lastName;
     #password;
-
+    /*Don't forget about reg */
     constructor(email,fName,lName,password,reg){
         this.#email = email;
         this.#firstName = fName;
