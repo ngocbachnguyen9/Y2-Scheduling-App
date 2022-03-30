@@ -1,6 +1,8 @@
 function Welcome(){
     return(
-        <h1>Welcome To FDM</h1>
+        <div className="Welcome">
+            <h1>Welcome To FDM</h1>
+        </div>
     )
 }
 
