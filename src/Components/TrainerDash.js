@@ -141,7 +141,7 @@ function TrainerDash({registry}) {
             }
             />
           <div className="logoSec">
-            <img className="logo" src={fdmLogo} alt="Image Failed To Load" />
+            <img className="logo" src={fdmLogo} alt="" />
             <h1>Trainer Dashboard</h1>
           </div>
         <TrainerLoginForm Login={login}></TrainerLoginForm>
