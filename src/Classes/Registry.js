@@ -6,7 +6,7 @@ class Registry{
     #allCourses;
     #allTrainers;
     constructor(){
-        this.#allStaff = [new Staff(1,"Alex","Bert","ABC"), new Staff(2,"Callum","Davidson","DEF")]
+        this.#allStaff = [new Staff("1","Alex","Bert","ABC"), new Staff("2","Callum","Davidson","DEF")]
         this.#allTrainers = [new Trainer("a@FDM.org","David","King","A")]
         this.#allCourses = []
     }
