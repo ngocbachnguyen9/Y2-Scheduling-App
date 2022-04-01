@@ -153,7 +153,7 @@ function StaffDash({registry}) {
             />
             <div className="logoSec">
                 <img className="logo" src={fdmLogo} alt="" />
-                <h2>Staff Login</h2>
+                <h2>Training and Scheduling</h2>
             </div>
         <StaffLoginForm Login={login}></StaffLoginForm>
         </div>
