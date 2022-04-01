@@ -1,0 +1,11 @@
+{
+    "courses": [{
+        "id": 1,
+        "courseName": "untitled course",
+        "courseLength": "6 weeks",
+        "modules": [{
+
+        }]
+
+    }]
+}
