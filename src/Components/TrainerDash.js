@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Popup from "./Popup";
 
 function TrainerDash({updateSkill,ud,Logout}) {
 
