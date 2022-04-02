@@ -1,57 +1,58 @@
 {
-  "courses": [
-    {
-      "id": 1,
-      "courseName": "Procedural Programming",
-      "courseLength": "6 weeks",
-      "activeCourse": "False",
-      "modules": [
-        {}
-      ]
-    },
-    {
-      "id": 2,
-      "courseName": "Object-Oriented Programming",
-      "courseLength": "12 weeks",
-      "activeCourse": "False",
-      "modules": [
-        {}
-      ]
-    }
-  ],
-  "users": [
-    {
-      "id": 1,
-      "name": "helos",
-      "email": "helos@FDM.org",
-      "password": "123",
-      "userType": "staff"
-    },
-    {
-      "id": 2,
-      "name": "richard",
-      "email": "richard@FDM.org",
-      "password": "123",
-      "userType": "trainer",
-      "skill": "Time Management",
-      "availability": ""
-    },
-    {
-      "id": 3,
-      "name": "harry",
-      "email": "harry@FDM.org",
-      "password": "123",
-      "userType": "trainer",
-      "skill": "",
-      "availability": [
+    "courses": [{
+            "id": 1,
+            "courseName": "Procedural Programming",
+            "courseLength": "6 weeks",
+            "activeCourse": "False",
+            "modules": [{
+                "name": "",
+                "module-description": "",
+                "module-Skill": "",
+                "trainerId": "",
+                "start-time": "",
+                "end-time": ""
+            }]
+        },
         {
-          "Mon": "",
-          "Tue": "",
-          "Wed": "",
-          "Thur": "",
-          "Fri": ""
+            "id": 2,
+            "courseName": "Object-Oriented Programming",
+            "courseLength": "12 weeks",
+            "activeCourse": "False",
+            "modules": [
+                {}
+            ]
         }
-      ]
-    }
-  ]
+    ],
+    "users": [{
+            "id": 1,
+            "name": "helos",
+            "email": "helos@FDM.org",
+            "password": "123",
+            "userType": "staff"
+        },
+        {
+            "id": 2,
+            "name": "richard",
+            "email": "richard@FDM.org",
+            "password": "123",
+            "userType": "trainer",
+            "skill": "Time Management",
+            "availability": ""
+        },
+        {
+            "id": 3,
+            "name": "harry",
+            "email": "harry@FDM.org",
+            "password": "123",
+            "userType": "trainer",
+            "skill": "",
+            "availability": [{
+                "Mon": "",
+                "Tue": "",
+                "Wed": "",
+                "Thur": "",
+                "Fri": ""
+            }]
+        }
+    ]
 }
