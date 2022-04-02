@@ -14,7 +14,7 @@ function StaffDash({ud, Logout, cd} ) {
               <td>{cd[i].courseName}</td>
               <td>{cd[i].courseLength}</td>
               <td><button>Add Modules</button></td>
-              <td>{cd[i].activeCourse}</td>
+              <td>{cd[i].activeCourse ? "True" : "False"}</td>
               <td><button>Delete Course</button></td>
             </tr>
     )
