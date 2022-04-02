@@ -1,41 +1,44 @@
 import { useState } from "react";
 import Popup from "./Popup";
 
-function TrainerDash({ud,Logout}) {
+function TrainerDash({updateSkill,ud,Logout}) {
 
-  const [skill,setSkill] = useState(ud.skill)
+  const [profileData,setProfileData] = useState({
+    skill: ud.skill,
+    availability: ud.availability
+  })
 
-  const getUserByID = async (id) => {
-		const res = await fetch(`http://localhost:5500/users/${id}`)
-		const data = await res.json()
+  const [showProfile, setShowProfile] = useState(false)
 
-		return data
-	}
-
-  console.log((ud))
-  
-
-  const [isOpen, setIsOpen] = useState(false);
- 
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
+  const formUpdate = () =>{
+    setShowProfile(!showProfile)
   }
+
+  const submitSkill= e =>{
+    e.preventDefault()
+
+    updateSkill(profileData.skill,ud.userID)
+
+    
+    formUpdate()
+  }
+  
   return (
     <div className="TrainerDash">
       {(ud.userType === "trainer") ? (
         <div>
           <h1>Welcome, {ud.name}</h1>
-          <button onClick={togglePopup}>View Profile</button>
+          <button onClick={formUpdate}>Update Profile</button>
           <button>View Timetable</button>
           <button onClick={Logout}>Logout</button>
-          {isOpen && <Popup
-      content={<>
-        <b>Profile</b>   
-        <p>{skill}</p>     
-        <button>Update Skill</button>
-      </>}
-      handleClose={togglePopup}
-    />}
+          
+  
+        <p><b>Profile:</b>{ud.skill}</p>
+        {showProfile && <form onSubmit={submitSkill}>
+          <input value={profileData.skill} type="text" name="newSkill" id="newSkill" onChange={e => setProfileData({...profileData, skill: e.target.value})}/>
+          <input type="submit" value="update Skill"/>
+        </form>}
+
         </div>
       ) : (
         <div>

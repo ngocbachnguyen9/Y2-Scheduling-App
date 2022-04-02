@@ -14,7 +14,6 @@ const App = () => {
 
 	const [userDetails,setUserDetails] = useState({})
 
-	console.log(allCourses)
 
 
 	const userIsNoOne= () =>{
@@ -24,6 +23,31 @@ const App = () => {
 		else{
 			return false
 		}
+	}
+	const getUserByID = async (id) => {
+		const res = await fetch(`http://localhost:5500/users/${id}`)
+		const data = await res.json()
+
+		return data
+	}
+
+	const updateSkill = async(newSkill,id) =>{
+		const skillToUpdate = await getUserByID(id)
+		const updateSk = {...skillToUpdate,skill: newSkill}
+
+		const res = await fetch(`http://localhost:5500/users/${id}`,{
+			method:'PUT',
+			headers: {
+				'Content-type': 'application/Json'
+			},
+			body: JSON.stringify(updateSk)
+		})
+
+		const data = await res.json()
+
+		setUserDetails({...userDetails,skill:data.skill})
+
+		
 	}
 
 	const Login = (details) =>{
@@ -100,7 +124,7 @@ const App = () => {
 				<Route path="staffdash" element={ userDetails.userType === "staff" ?
 					 <StaffDash ud = {userDetails} Logout={Logout}/> : <Navigate to="/" />} />
 				<Route path="trainerdash" element={userDetails.userType === "trainer" ?
-				<TrainerDash ud = {userDetails} Logout={Logout}/> : <Navigate to="/" />} />
+				<TrainerDash updateSkill={updateSkill} ud = {userDetails} Logout={Logout}/> : <Navigate to="/" />} />
 			</Routes>
 		</Router>
 	  );
