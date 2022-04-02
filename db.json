@@ -3,7 +3,7 @@
             "id": 1,
             "courseName": "Procedural Programming",
             "courseLength": "6 weeks",
-            "activeCourse": "False",
+            "activeCourse": false,
             "modules": [{
                 "name": "",
                 "module-description": "",
@@ -17,10 +17,15 @@
             "id": 2,
             "courseName": "Object-Oriented Programming",
             "courseLength": "12 weeks",
-            "activeCourse": "False",
-            "modules": [
-                {}
-            ]
+            "activeCourse": false,
+            "modules": [{
+                "name": "",
+                "module-description": "",
+                "module-Skill": "",
+                "trainerId": "",
+                "start-time": "",
+                "end-time": ""
+            }]
         }
     ],
     "users": [{
