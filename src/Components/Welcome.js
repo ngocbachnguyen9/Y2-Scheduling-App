@@ -115,7 +115,7 @@ function Welcome({users,Login}){
             />
           <div className="logoSec">
             <img className="logo" src={fdmLogo} alt="" />
-            <h1>Trainer Dashboard</h1>
+            <h1>Training and Scheduling</h1>
           </div>
             <LoginForm users = {users} Login = {Login}/>
             

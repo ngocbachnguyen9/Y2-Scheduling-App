@@ -122,7 +122,7 @@ const App = () => {
 				:((userDetails.userType === "staff") ?  <Navigate to="/staffdash"/>
 				:(<Navigate to="/trainerdash"/>))}/>
 				<Route path="staffdash" element={ userDetails.userType === "staff" ?
-					 <StaffDash ud = {userDetails} Logout={Logout}/> : <Navigate to="/" />} />
+					 <StaffDash ud = {userDetails} cd = {allCourses} Logout={Logout}/> : <Navigate to="/" />} />
 				<Route path="trainerdash" element={userDetails.userType === "trainer" ?
 				<TrainerDash updateSkill={updateSkill} ud = {userDetails} Logout={Logout}/> : <Navigate to="/" />} />
 			</Routes>
