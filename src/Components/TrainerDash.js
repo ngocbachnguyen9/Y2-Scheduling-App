@@ -34,7 +34,7 @@ function TrainerDash({updateSkill,ud,Logout}) {
   
         <p><b>Profile:</b>{ud.skill}</p>
         {showProfile && <form onSubmit={submitSkill}>
-          <input value={profileData.skill} type="text" name="newSkill" id="newSkill" onChange={e => setProfileData({...profileData, skill: e.target.value})}/>
+          <input type="text" name="newSkill" id="newSkill" onChange={e => setProfileData({...profileData, skill: e.target.value})}/>
           <input type="submit" value="update Skill"/>
         </form>}
 

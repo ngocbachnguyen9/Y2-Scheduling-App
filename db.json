@@ -19,6 +19,7 @@
             "courseLength": "12 weeks",
             "activeCourse": false,
             "modules": [{
+                "id": 1,
                 "name": "",
                 "module-description": "",
                 "module-Skill": "",
