@@ -3,9 +3,48 @@
         "id": 1,
         "courseName": "untitled course",
         "courseLength": "6 weeks",
-        "modules": [{
+        "runningModule": false,
+        "modules": [
+            {}
+        ]
+    }],
 
-        }]
-
-    }]
+    "users": [{
+            "id": 1,
+            "name": "helos",
+            "email": "helos@FDM.org",
+            "password": "123",
+            "userType": "staff"
+        },
+        {
+            "id": 2,
+            "name": "richard",
+            "email": "richard@FDM.org",
+            "password": "123",
+            "userType": "trainer",
+            "skill": "time management",
+            "availability": [{
+                "Mon": "",
+                "Tue": "",
+                "Wed": "",
+                "Thur": "",
+                "Fri": ""
+            }]
+        },
+        {
+            "id": 3,
+            "name": "harry",
+            "email": "harry@FDM.org",
+            "password": "123",
+            "userType": "trainer",
+            "skill": "",
+            "availability": [{
+                "Mon": "",
+                "Tue": "",
+                "Wed": "",
+                "Thur": "",
+                "Fri": ""
+            }]
+        }
+    ]
 }
