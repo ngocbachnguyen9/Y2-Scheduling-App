@@ -1,27 +1,29 @@
-import React from 'react'
+import {useState} from 'react'
 
 const AddModuleForm = () => {
+
+    const[text, setText] = useState('')
+    const[startTime, setStartTime] = useState('')
+    const[endTime, setEndTime] = useState('')
+    const[trainer, setTrainer] = useState('')
+    
   return (
     <form className='addModuleForm'>
         <div className='form-control'>
             <label>Module</label>
-            <input type="text" placeholder='Add Module' />
+            <input type="text" placeholder='Add Module' value={text} onChange={(e)=> setText(e.target.value)}/>
         </div>
         <div className='form-control'>
             <label>Trainer Name</label>
-            <input type="text" placeholder='Add Trainer Name' />
-        </div>
-        <div className='form-control'>
-            <label>Trainer Skill</label>
-            <input type="text" placeholder='Add Trainer Skill' />
+            <input type="text" placeholder='Add Trainer Name' value={trainer} onChange={(e)=> setTrainer(e.target.value)}/>
         </div>
         <div className='form-control'>
             <label>Start day and time</label>
-            <input type="text" placeholder='Add Start day and time' />
+            <input type="datetime-local" value={startTime} onChange={(e)=> setStartTime(e.target.value)}/>
         </div>
         <div className='form-control'>
             <label>End day and time</label>
-            <input type="text" placeholder='Add end day and time' />
+            <input type="datetime-local" value={endTime} onChange={(e)=> setEndTime(e.target.value)}/>
         </div>
         <div>
         <input type="submit" value="add Module" />

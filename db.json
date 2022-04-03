@@ -7,14 +7,14 @@
       "modules": [
         {
           "moduleName": "Time Management",
-          "trainerID": 2,
+          "trainerName": "richard",
           "startTime": "15/03/2022, 12:00pm UTC",
           "endTime": "15/03/2022, 2:00pm UTC",
           "id": 1
         },
         {
           "moduleName": "Team Skills",
-          "trainerID": 3,
+          "trainerID": "harry",
           "startTime": "22/03/2022, 12:00pm UTC",
           "endTime": "22/03/2022, 2:00pm UTC",
           "id": 2

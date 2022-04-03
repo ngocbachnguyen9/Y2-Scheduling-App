@@ -26,6 +26,7 @@ const Course = ({course, onDelete, addModule}) => {
         endTime: "15/03/2022, 2:00pm UTC",
     })
   }
+  
 
   return (
     <div className="course">

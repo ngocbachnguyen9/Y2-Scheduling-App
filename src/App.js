@@ -98,8 +98,6 @@ const App = () => {
 
 		const data = await res.json()
 
-		setUserDetails({...userDetails,skill:data.skill})
-
 		setSystemUsers(systemUsers.map((user) => user.id === id ?
 		data : user
 		))
