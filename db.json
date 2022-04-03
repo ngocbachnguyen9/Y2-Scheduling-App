@@ -1,9 +1,23 @@
 {
     "courses": [{
             "courseName": "Procedural Programming",
-            "courseLength": 0,
+            "courseLength": 2,
             "activeCourse": false,
-            "modules": [],
+            "modules": [{
+                    "moduleName": "Time Management",
+                    "trainerID": 2,
+                    "startTime": "15/03/2022, 12:00pm UTC",
+                    "endTime": "15/03/2022, 2:00pm UTC",
+                    "id": 1
+                },
+                {
+                    "moduleName": "Team Skills",
+                    "trainerID": 3,
+                    "startTime": "22/03/2022, 12:00pm UTC",
+                    "endTime": "22/03/2022, 2:00pm UTC",
+                    "id": 2
+                }
+            ],
             "id": 1
         },
         {
@@ -34,7 +48,7 @@
             "email": "richard@FDM.org",
             "password": "123",
             "userType": "trainer",
-            "skill": "Tiime Management",
+            "skill": "Time Management",
             "availability": ""
         },
         {
@@ -43,14 +57,8 @@
             "email": "harry@FDM.org",
             "password": "123",
             "userType": "trainer",
-            "skill": "",
-            "availability": [{
-                "Mon": "",
-                "Tue": "",
-                "Wed": "",
-                "Thur": "",
-                "Fri": ""
-            }]
+            "skill": "Team Skills",
+            "availability": ""
         }
     ]
 }

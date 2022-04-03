@@ -160,6 +160,20 @@ th {
     justify-content: space-between;
 }
 
+.module {
+    display: block;
+    background-color: #e7e7e7;
+    border-radius: 1em;
+    padding: .4em .8em;
+    margin: .2em;
+}
+
+.moduleHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .btn {
     display: block;
     background: #000;

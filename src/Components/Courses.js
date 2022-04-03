@@ -2,12 +2,12 @@ import React from 'react'
 import Course from "./Course";
 
 
-const Courses = ({courses, onDelete}) => {
+const Courses = ({courses, onDelete, addModule}) => {
   return (
       <>
         {courses.map((course)=>(
       <Course  key={course.id} course={course}
-      onDelete={onDelete}  />
+      onDelete={onDelete} addModule={addModule} />
   ))}
   </>
   )

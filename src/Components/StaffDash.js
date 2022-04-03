@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Courses from "./Courses";
 
 
-function StaffDash({ud, Logout, cd, courseDelete, addCourse} ) {
+function StaffDash({ud, Logout, cd, courseDelete, addCourse, addModule} ) {
 
   const [showAddCourse, setShowAddCourse] = useState(false)
 
@@ -21,12 +21,6 @@ function StaffDash({ud, Logout, cd, courseDelete, addCourse} ) {
     setShowAddCourse(!showAddCourse)
   }
 
-  // const testingP = () =>{
-  //   {cd.map((course)=>(
-  //     <Course  key={course.id} course={course} />
-  //   ))}
-  // }
-
   return (
     
     <div className="StaffDash">
@@ -40,7 +34,6 @@ function StaffDash({ud, Logout, cd, courseDelete, addCourse} ) {
             <h2>Courses</h2>          
             <button className="btn" onClick={addCourseView}>Create Course</button>
           </div>
-
           {showAddCourse && <form onSubmit={courseAddHandler}>
             <div className="course-form-container">
               <label>Course Name </label>
@@ -50,7 +43,7 @@ function StaffDash({ud, Logout, cd, courseDelete, addCourse} ) {
               <input type="submit" value="Add Course" />
             </div>
           </form>}
-          <Courses courses={cd} onDelete={courseDelete}/>
+          <Courses courses={cd} onDelete={courseDelete} addModule={addModule}/>
 
         </div>
       ) : (

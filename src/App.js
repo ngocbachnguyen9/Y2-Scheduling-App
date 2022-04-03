@@ -24,31 +24,6 @@ const App = () => {
 			return false
 		}
 	}
-	const getUserByID = async (id) => {
-		const res = await fetch(`http://localhost:5500/users/${id}`)
-		const data = await res.json()
-
-		return data
-	}
-
-	const updateSkill = async(newSkill,id) =>{
-		const skillToUpdate = await getUserByID(id)
-		const updateSk = {...skillToUpdate,skill: newSkill}
-
-		const res = await fetch(`http://localhost:5500/users/${id}`,{
-			method:'PUT',
-			headers: {
-				'Content-type': 'application/Json'
-			},
-			body: JSON.stringify(updateSk)
-		})
-
-		const data = await res.json()
-
-		setUserDetails({...userDetails,skill:data.skill})
-
-		
-	}
 
 	const Login = (details) =>{
 		setUserEmail(details.email)
@@ -102,6 +77,30 @@ const App = () => {
 		getCourses()
 	},[])
 
+	const getUserByID = async (id) => {
+		const res = await fetch(`http://localhost:5500/users/${id}`)
+		const data = await res.json()
+
+		return data
+	}
+
+	const updateSkill = async(newSkill,id) =>{
+		const skillToUpdate = await getUserByID(id)
+		const updateSk = {...skillToUpdate,skill: newSkill}
+
+		const res = await fetch(`http://localhost:5500/users/${id}`,{
+			method:'PUT',
+			headers: {
+				'Content-type': 'application/Json'
+			},
+			body: JSON.stringify(updateSk)
+		})
+
+		const data = await res.json()
+
+		setUserDetails({...userDetails,skill:data.skill})
+	}
+
 	const fetchUsers = async () => {
 		const res = await fetch("http://localhost:5500/users")
 		const data = await res.json()
@@ -116,7 +115,6 @@ const App = () => {
 	}
 
 	const addCourse = async (course) =>{
-		console.log(course)
 		const res =  await fetch("http://localhost:5500/courses",{
 			method:'POST',
 			headers:{
@@ -126,7 +124,6 @@ const App = () => {
 		})
 
 		const data = await res.json()
-		console.log(data)
 
 		setAllCourses([...allCourses, data])
 
@@ -138,9 +135,35 @@ const App = () => {
 		})
 
 		setAllCourses(allCourses.filter((course)=> course.id !== id))
-
 	}
 
+	const getCourseById = async (id) => {
+		const res = await fetch(`http://localhost:5500/courses/${id}`)
+		const data = await res.json()
+
+		return data
+	}
+
+	const addModule = async(courseId,module) =>{
+		const moduleToChange = await getCourseById(courseId)
+		const updateMod = {...moduleToChange,modules: [...moduleToChange.modules,module]}
+
+		const res =await fetch(`http://localhost:5500/courses/${courseId}`,{
+			method:"PUT",
+			headers:{
+				'Content-type':'application/json'
+			},
+			body: JSON.stringify(updateMod)
+		})
+
+		const data = await res.json()
+
+		setAllCourses(allCourses.map((course) => course.id === courseId
+		? {...course,modules: data.modules} : course
+		))
+	}
+
+	
 	return (
 		<Router>
 			<Routes>
@@ -148,7 +171,7 @@ const App = () => {
 				:((userDetails.userType === "staff") ?  <Navigate to="/staffdash"/>
 				:(<Navigate to="/trainerdash"/>))}/>
 				<Route path="staffdash" element={ userDetails.userType === "staff" ?
-					 <StaffDash addCourse={addCourse} courseDelete={deleteCourse} ud = {userDetails} cd = {allCourses} Logout={Logout}/> : <Navigate to="/" />} />
+					 <StaffDash addModule={addModule} addCourse={addCourse} courseDelete={deleteCourse} ud = {userDetails} cd = {allCourses} Logout={Logout}/> : <Navigate to="/" />} />
 				<Route path="trainerdash" element={userDetails.userType === "trainer" ?
 				<TrainerDash updateSkill={updateSkill} ud = {userDetails} Logout={Logout}/> : <Navigate to="/" />} />
 			</Routes>
