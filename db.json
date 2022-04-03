@@ -33,6 +33,13 @@
             "activeCourse": false,
             "modules": [],
             "id": 3
+        },
+        {
+            "courseName": "Operating Systems",
+            "courseLength": 0,
+            "activeCourse": false,
+            "modules": [],
+            "id": 4
         }
     ],
     "users": [{
@@ -48,7 +55,7 @@
             "email": "richard@FDM.org",
             "password": "123",
             "userType": "trainer",
-            "skill": "Time Management",
+            "skill": "communications",
             "availability": ""
         },
         {

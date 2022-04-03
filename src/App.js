@@ -57,7 +57,10 @@ const App = () => {
 			else{
 				setUserDetails({
 					userID : -1,
-					userType : ""
+					userType : "",
+					skill:"",
+					availability: "",
+					name: ""
 				})
 			}
 		}
@@ -162,7 +165,6 @@ const App = () => {
 		? {...course,modules: data.modules} : course
 		))
 	}
-
 	
 	return (
 		<Router>
