@@ -115,6 +115,32 @@ const App = () => {
 		return data
 	}
 
+	const addCourse = async (course) =>{
+		console.log(course)
+		const res =  await fetch("http://localhost:5500/courses",{
+			method:'POST',
+			headers:{
+				'Content-type':'application/json'
+			},
+			body: JSON.stringify(course)
+		})
+
+		const data = await res.json()
+		console.log(data)
+
+		setAllCourses([...allCourses, data])
+
+	}
+	
+	const deleteCourse = async (id) =>{
+		await fetch(`http://localhost:5500/courses/${id}`,{
+			method:'DELETE',
+		})
+
+		setAllCourses(allCourses.filter((course)=> course.id !== id))
+
+	}
+
 	return (
 		<Router>
 			<Routes>
@@ -122,7 +148,7 @@ const App = () => {
 				:((userDetails.userType === "staff") ?  <Navigate to="/staffdash"/>
 				:(<Navigate to="/trainerdash"/>))}/>
 				<Route path="staffdash" element={ userDetails.userType === "staff" ?
-					 <StaffDash ud = {userDetails} cd = {allCourses} Logout={Logout}/> : <Navigate to="/" />} />
+					 <StaffDash addCourse={addCourse} courseDelete={deleteCourse} ud = {userDetails} cd = {allCourses} Logout={Logout}/> : <Navigate to="/" />} />
 				<Route path="trainerdash" element={userDetails.userType === "trainer" ?
 				<TrainerDash updateSkill={updateSkill} ud = {userDetails} Logout={Logout}/> : <Navigate to="/" />} />
 			</Routes>

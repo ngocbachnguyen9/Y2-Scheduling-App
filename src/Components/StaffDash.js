@@ -1,45 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
+import Courses from "./Courses";
 
 
-function StaffDash({ud, Logout, cd} ) {
-  
-  console.log(ud.userType)
+function StaffDash({ud, Logout, cd, courseDelete, addCourse} ) {
 
-  const tableRows = [];
+  const [showAddCourse, setShowAddCourse] = useState(false)
 
-  for(let i=0; i<cd.length; i++){
-    tableRows.push(
-            <tr>
-              <td>{cd[i].id}</td>
-              <td>{cd[i].courseName}</td>
-              <td>{cd[i].courseLength}</td>
-              <td><button>Add Modules</button></td>
-              <td>{cd[i].activeCourse ? "True" : "False"}</td>
-              <td><button>Delete Course</button></td>
-            </tr>
-    )
+  const courseAddHandler = e =>{
+    e.preventDefault()
+    addCourse({
+      courseName: e.target.courseName.value,
+      courseLength: 0,
+      activeCourse: false,
+      modules: []
+    })
+    addCourseView()
   }
+
+  const addCourseView = () =>{
+    setShowAddCourse(!showAddCourse)
+  }
+
+  // const testingP = () =>{
+  //   {cd.map((course)=>(
+  //     <Course  key={course.id} course={course} />
+  //   ))}
+  // }
 
   return (
     
     <div className="StaffDash">
       {(ud.userType === "staff") ? (
         <div>
+          <div className="mainHeader">
           <h1>Welcome, {ud.name}</h1>
-          <button>Create Course</button>
-          <h2>List of Courses</h2>
-          <table id="Course Table">
-            <tr>
-              <th>Course ID</th>
-              <th>Course Name</th>
-              <th>Course Length</th>
-              <th>Add Modules</th>
-              <th>Course Active?</th>
-              <th>Delete Course</th>
-            </tr>
-            {tableRows}
-          </table>
-          <button onClick={Logout}>Logout</button>
+          <button className="btn" style={{backgroundColor:"#4427fa"}} onClick={Logout}>Logout</button>
+          </div>
+          <div className="sdHeader">
+            <h2>Courses</h2>          
+            <button className="btn" onClick={addCourseView}>Create Course</button>
+          </div>
+
+          {showAddCourse && <form onSubmit={courseAddHandler}>
+            <div className="course-form-container">
+              <label>Course Name </label>
+              <input type="text" name="courseName" id="course-name" required/>
+            </div>
+            <div className="submit-container">
+              <input type="submit" value="Add Course" />
+            </div>
+          </form>}
+          <Courses courses={cd} onDelete={courseDelete}/>
+
         </div>
       ) : (
         <div>

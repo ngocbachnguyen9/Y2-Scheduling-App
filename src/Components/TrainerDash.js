@@ -17,7 +17,6 @@ function TrainerDash({updateSkill,ud,Logout}) {
     e.preventDefault()
 
     updateSkill(profileData.skill,ud.userID)
-
     
     formUpdate()
   }

@@ -1,39 +1,20 @@
 body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #e9f4fb;
 }
 
-.Menu {
-    position: relative;
-    z-index: 10;
-}
-
-.Menu {
-    background-color: rgba(255, 255, 255, 0.377);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 75px;
+.mainHeader {
     display: flex;
     align-items: center;
-    box-shadow: 0 0 1em 0 black;
+    justify-content: space-between;
+    padding: 1em;
 }
 
-.Menu * {
-    display: inline;
-}
-
-.Menu li {
-    margin: 1em;
-}
-
-.Menu li a {
-    color: black;
-    text-decoration: none;
+.sdHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
 }
 
 td,
@@ -165,14 +146,32 @@ th {
     }
 }
 
-.TrainerDash {
-    margin-top: 4.8em;
+.course {
+    display: block;
+    background: #dddddd;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 1em;
 }
 
-.StaffDash {
-    margin-top: 4.8em;
+.course h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.Welcome {
-    margin-top: 4.8em;
+.btn {
+    display: block;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: .5em 1em;
+    margin: .5em;
+    border-radius: 1em;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:active {
+    transform: scale(0.97);
 }

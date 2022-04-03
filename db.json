@@ -1,32 +1,24 @@
 {
     "courses": [{
-            "id": 1,
             "courseName": "Procedural Programming",
-            "courseLength": "6 weeks",
+            "courseLength": 0,
             "activeCourse": false,
-            "modules": [{
-                "name": "",
-                "module-description": "",
-                "module-Skill": "",
-                "trainerId": "",
-                "start-time": "",
-                "end-time": ""
-            }]
+            "modules": [],
+            "id": 1
         },
         {
-            "id": 2,
             "courseName": "Object-Oriented Programming",
-            "courseLength": "12 weeks",
+            "courseLength": 0,
             "activeCourse": false,
-            "modules": [{
-                "id": 1,
-                "name": "",
-                "module-description": "",
-                "module-Skill": "",
-                "trainerId": "",
-                "start-time": "",
-                "end-time": ""
-            }]
+            "modules": [],
+            "id": 2
+        },
+        {
+            "courseName": "Web Technology",
+            "courseLength": 0,
+            "activeCourse": false,
+            "modules": [],
+            "id": 3
         }
     ],
     "users": [{
@@ -42,7 +34,7 @@
             "email": "richard@FDM.org",
             "password": "123",
             "userType": "trainer",
-            "skill": "Time Management",
+            "skill": "Tiime Management",
             "availability": ""
         },
         {
