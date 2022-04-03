@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import StaffDash from "./Components/StaffDash";
 import TrainerDash from "./Components/TrainerDash";
 import Welcome from "./Components/Welcome";
@@ -13,7 +13,6 @@ const App = () => {
 	const[allCourses, setAllCourses] = useState();
 
 	const [userDetails,setUserDetails] = useState({})
-
 
 
 	const userIsNoOne= () =>{
@@ -31,8 +30,6 @@ const App = () => {
 
 	const Logout = () =>{
 		setUserEmail((""))
-		const navigate = useNavigate();
-		navigate("/")
 		
 	}
 
@@ -102,6 +99,10 @@ const App = () => {
 		const data = await res.json()
 
 		setUserDetails({...userDetails,skill:data.skill})
+
+		setSystemUsers(systemUsers.map((user) => user.id === id ?
+		data : user
+		))
 	}
 
 	const fetchUsers = async () => {

@@ -1,71 +1,74 @@
 {
-    "courses": [{
-            "courseName": "Procedural Programming",
-            "courseLength": 2,
-            "activeCourse": false,
-            "modules": [{
-                    "moduleName": "Time Management",
-                    "trainerID": 2,
-                    "startTime": "15/03/2022, 12:00pm UTC",
-                    "endTime": "15/03/2022, 2:00pm UTC",
-                    "id": 1
-                },
-                {
-                    "moduleName": "Team Skills",
-                    "trainerID": 3,
-                    "startTime": "22/03/2022, 12:00pm UTC",
-                    "endTime": "22/03/2022, 2:00pm UTC",
-                    "id": 2
-                }
-            ],
-            "id": 1
+  "courses": [
+    {
+      "courseName": "Procedural Programming",
+      "courseLength": 2,
+      "activeCourse": false,
+      "modules": [
+        {
+          "moduleName": "Time Management",
+          "trainerID": 2,
+          "startTime": "15/03/2022, 12:00pm UTC",
+          "endTime": "15/03/2022, 2:00pm UTC",
+          "id": 1
         },
         {
-            "courseName": "Object-Oriented Programming",
-            "courseLength": 0,
-            "activeCourse": false,
-            "modules": [],
-            "id": 2
-        },
-        {
-            "courseName": "Web Technology",
-            "courseLength": 0,
-            "activeCourse": false,
-            "modules": [],
-            "id": 3
-        },
-        {
-            "courseName": "Operating Systems",
-            "courseLength": 0,
-            "activeCourse": false,
-            "modules": [],
-            "id": 4
+          "moduleName": "Team Skills",
+          "trainerID": 3,
+          "startTime": "22/03/2022, 12:00pm UTC",
+          "endTime": "22/03/2022, 2:00pm UTC",
+          "id": 2
         }
-    ],
-    "users": [{
-            "id": 1,
-            "name": "helos",
-            "email": "helos@FDM.org",
-            "password": "123",
-            "userType": "staff"
-        },
-        {
-            "id": 2,
-            "name": "richard",
-            "email": "richard@FDM.org",
-            "password": "123",
-            "userType": "trainer",
-            "skill": "communications",
-            "availability": ""
-        },
-        {
-            "id": 3,
-            "name": "harry",
-            "email": "harry@FDM.org",
-            "password": "123",
-            "userType": "trainer",
-            "skill": "Team Skills",
-            "availability": ""
-        }
-    ]
+      ],
+      "id": 1
+    },
+    {
+      "courseName": "Object-Oriented Programming",
+      "courseLength": 0,
+      "activeCourse": false,
+      "modules": [],
+      "id": 2
+    },
+    {
+      "courseName": "Web Technology",
+      "courseLength": 0,
+      "activeCourse": false,
+      "modules": [],
+      "id": 3
+    },
+    {
+      "courseName": "Operating Systems",
+      "courseLength": 0,
+      "activeCourse": false,
+      "modules": [],
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "helos",
+      "email": "helos@FDM.org",
+      "password": "123",
+      "userType": "staff"
+    },
+    {
+      "id": 2,
+      "name": "richard",
+      "email": "richard@FDM.org",
+      "password": "123",
+      "userType": "trainer",
+      "skill": "communications",
+      "availability": ""
+    },
+    {
+      "id": 3,
+      "name": "harry",
+      "email": "harry@FDM.org",
+      "password": "123",
+      "userType": "trainer",
+      "skill": "Team Skills",
+      "availability": ""
+    }
+  ]
 }
