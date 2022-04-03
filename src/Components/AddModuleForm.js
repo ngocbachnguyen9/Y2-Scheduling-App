@@ -26,7 +26,6 @@ const AddModuleForm = () => {
         <div>
         <input type="submit" value="add Module" />
         </div>
-
     </form>
   )
 }

@@ -35,13 +35,6 @@
       "activeCourse": false,
       "modules": [],
       "id": 3
-    },
-    {
-      "courseName": "Operating Systems",
-      "courseLength": 0,
-      "activeCourse": false,
-      "modules": [],
-      "id": 4
     }
   ],
   "users": [
