@@ -2,8 +2,15 @@ import { useState } from 'react'
 import {FaTimes} from 'react-icons/fa'
 import AddModuleForm from './AddModuleForm'
 import Modules from './Modules'
+import Popup from './Popup'
 
 const Course = ({course, onDelete, addModule}) => {
+
+  const [popIsOpen,setPopIsOpen] = useState(false);
+
+  const togglePopup = () =>{
+      setPopIsOpen(!popIsOpen)
+  }
 
   const[viewModules,changeViewModule] =useState(false)
 
@@ -26,7 +33,6 @@ const Course = ({course, onDelete, addModule}) => {
         endTime: "15/03/2022, 2:00pm UTC",
     })
   }
-  
 
   return (
     <div className="course">
@@ -36,8 +42,15 @@ const Course = ({course, onDelete, addModule}) => {
         {viewModules ? 
         <div className='moduleHeader'>
         <button onClick={changeView} className='btn'>Hide Modules</button> 
-        <button onClick={handleAddModule} className='btn'>Add Modules</button> 
-        <AddModuleForm />
+        <button onClick={togglePopup} className='btn'>Add Modules</button> 
+        {popIsOpen && <Popup 
+        content = {
+          <AddModuleForm addModuleHandler={handleAddModule}/>
+        }
+          handleClose = {togglePopup}
+        
+        />}
+
         </div>
         :
         <button onClick={changeView} className='btn'>View Modules</button>}
@@ -46,7 +59,6 @@ const Course = ({course, onDelete, addModule}) => {
         {viewModules && (course.modules.length === 0) &&
         <p>There are currently no available Modules</p>}
         </div>
-
   )
 }
 

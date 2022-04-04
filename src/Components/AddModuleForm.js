@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-const AddModuleForm = () => {
+const AddModuleForm = (addModuleHandler) => {
 
     const[text, setText] = useState('')
     const[startTime, setStartTime] = useState()
