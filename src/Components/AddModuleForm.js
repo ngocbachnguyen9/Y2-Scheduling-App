@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import CustomPopup from "./PopUp";
 
 const AddModuleForm = () => {
 
@@ -6,9 +7,26 @@ const AddModuleForm = () => {
     const[startTime, setStartTime] = useState('')
     const[endTime, setEndTime] = useState('')
     const[trainer, setTrainer] = useState('')
-    
+    const [visibility, setVisibility] = useState(false);
+
+    const popupCloseHandler = (e) => {
+        setVisibility(e);
+    };
+
   return (
     <form className='addModuleForm'>
+        <div className="addModuleForm">
+            <button onClick={() => setVisibility(!visibility)}>Toggle Popup</button>
+
+            <CustomPopup
+                onClose={popupCloseHandler}
+                show={visibility}
+                title="New Form"
+            >
+                <h1>Content Area</h1>
+                <h2>Filler!</h2>
+            </CustomPopup>
+        </div>
         <div className='form-control'>
             <label>Module</label>
             <input type="text" placeholder='Add Module' value={text} onChange={(e)=> setText(e.target.value)}/>
