@@ -3,7 +3,7 @@ import {useState} from 'react'
 const AddModuleForm = () => {
 
     const[text, setText] = useState('')
-    const[startTime, setStartTime] = useState('')
+    const[startTime, setStartTime] = useState()
     const[endTime, setEndTime] = useState('')
     const[trainer, setTrainer] = useState('')
     
@@ -19,6 +19,7 @@ const AddModuleForm = () => {
         </div>
         <div className='form-control'>
             <label>Start day and time</label>
+            
             <input type="datetime-local" value={startTime} onChange={(e)=> setStartTime(e.target.value)}/>
         </div>
         <div className='form-control'>
