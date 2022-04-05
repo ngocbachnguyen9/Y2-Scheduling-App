@@ -37,7 +37,8 @@ const Course = ({course, onDelete, addModule}) => {
       {
         id: newId,
         moduleName: mName,
-        trainerID: MTrainer,
+        trainerName: MTrainer,
+        trainerId: MtrainerId,
         startTime: moment(MStart).format('MMMM Do YYYY, h:mm a'),
         endTime: moment(MEnd).format('MMMM Do YYYY, h:mm a')
     })

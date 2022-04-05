@@ -5,7 +5,7 @@ const Popup = (props) => {
   return (
       <div className='popup-box'>
         <div className="box">
-            <FaTimes onClick={props.handleClose}/>
+            <FaTimes style={{cursor:'pointer'}} onClick={props.handleClose}/>
             {props.content}
         </div>
       </div>

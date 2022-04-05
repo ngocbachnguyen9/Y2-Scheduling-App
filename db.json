@@ -3,7 +3,13 @@
             "courseName": "Procedural Programming",
             "courseLength": 0,
             "activeCourse": false,
-            "modules": [],
+            "modules": [{
+                "id": 1,
+                "moduleName": "PHP",
+                "trainerID": "richard",
+                "startTime": "April 14th 2022, 2:49 pm",
+                "endTime": "April 14th 2022, 4:49 pm"
+            }],
             "id": 1
         },
         {
@@ -19,6 +25,19 @@
             "activeCourse": false,
             "modules": [],
             "id": 3
+        },
+        {
+            "courseName": "Web Tech",
+            "courseLength": 0,
+            "activeCourse": false,
+            "modules": [{
+                "id": 1,
+                "moduleName": "Communications",
+                "trainerID": "richard",
+                "startTime": "April 13th 2022, 2:44 pm",
+                "endTime": "April 13th 2022, 4:44 pm"
+            }],
+            "id": 4
         }
     ],
     "users": [{
