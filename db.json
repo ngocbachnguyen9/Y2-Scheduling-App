@@ -3,21 +3,7 @@
             "courseName": "Procedural Programming",
             "courseLength": 0,
             "activeCourse": false,
-            "modules": [{
-                    "moduleName": "Time Management",
-                    "trainerName": "richard",
-                    "startTime": "15/03/2022, 12:00pm UTC",
-                    "endTime": "15/03/2022, 2:00pm UTC",
-                    "id": 1
-                },
-                {
-                    "moduleName": "Team Skills",
-                    "trainerID": "harry",
-                    "startTime": "22/03/2022, 12:00pm UTC",
-                    "endTime": "22/03/2022, 2:00pm UTC",
-                    "id": 2
-                }
-            ],
+            "modules": [],
             "id": 1
         },
         {

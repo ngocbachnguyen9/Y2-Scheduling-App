@@ -1,3 +1,4 @@
+import moment from 'moment'
 import { useState } from 'react'
 import {FaTimes} from 'react-icons/fa'
 import AddModuleForm from './AddModuleForm'
@@ -24,14 +25,23 @@ const Course = ({course, onDelete, addModule}) => {
     changeViewModule(!viewModules)
   }
 
-  const handleAddModule = () =>{
+  const handleAddModule = (mName,MStart,MEnd,MTrainer,MtrainerId) =>{
+    const newId = course.modules.length + 1
+    
+
+
+    console.log(mName,MStart,MEnd,MTrainer,MtrainerId)
+
+
     addModule(course.id,
       {
-        moduleName: "for testing",
-        trainerID: 7,
-        startTime: "15/03/2022, 12:00pm UTC",
-        endTime: "15/03/2022, 2:00pm UTC",
+        id: newId,
+        moduleName: mName,
+        trainerID: MTrainer,
+        startTime: moment(MStart).format('MMMM Do YYYY, h:mm a'),
+        endTime: moment(MEnd).format('MMMM Do YYYY, h:mm a')
     })
+    
   }
 
   return (

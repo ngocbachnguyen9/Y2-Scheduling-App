@@ -148,6 +148,7 @@ const App = () => {
 
 	const addModule = async(courseId,module) =>{
 		const moduleToChange = await getCourseById(courseId)
+		
 		const updateMod = {...moduleToChange,modules: [...moduleToChange.modules,module]}
 
 		const res =await fetch(`http://localhost:5500/courses/${courseId}`,{
