@@ -33,6 +33,8 @@ const Course = ({ su , course, onDelete, addModule}) => {
     console.log(mName,MStart,MEnd,MTrainer,MtrainerId)
 
 
+
+
     addModule(course.id,
       {
         id: newId,
@@ -42,7 +44,8 @@ const Course = ({ su , course, onDelete, addModule}) => {
         startTime: moment(MStart).format('MMMM Do YYYY, h:mm a'),
         endTime: moment(MEnd).format('MMMM Do YYYY, h:mm a')
     })
-    
+  
+    togglePopup()
   }
 
   return (

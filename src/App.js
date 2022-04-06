@@ -149,8 +149,17 @@ const App = () => {
 
 	const addModule = async(courseId,module) =>{
 		const moduleToChange = await getCourseById(courseId)
+
+		const isActive = () => {
+			if (moduleToChange.modules.length + 1 >= 6) {
+				return true
+			}
+			else{
+				return false
+			}
+		}
 		
-		const updateMod = {...moduleToChange,modules: [...moduleToChange.modules,module]}
+		const updateMod = {...moduleToChange,modules: [...moduleToChange.modules,module], courseLength: moduleToChange.modules.length + 1,activeCourse: isActive() }
 
 		const res =await fetch(`http://localhost:5500/courses/${courseId}`,{
 			method:"PUT",
@@ -163,7 +172,7 @@ const App = () => {
 		const data = await res.json()
 
 		setAllCourses(allCourses.map((course) => course.id === courseId
-		? {...course,modules: data.modules} : course
+		? {...course,modules: data.modules, courseLength:data.courseLength, activeCourse: data.activeCourse} : course
 		))
 	}
 	
