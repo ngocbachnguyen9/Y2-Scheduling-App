@@ -90,7 +90,7 @@
     },
     {
       "id": 3,
-      "name": "harry",
+      "name": "Harry Osborn",
       "email": "harry@FDM.org",
       "password": "123",
       "userType": "trainer",
@@ -99,7 +99,7 @@
     },
     {
       "id": 4,
-      "name": "pete",
+      "name": "Pete Davis",
       "email": "pete@FDM.org",
       "password": "123",
       "userType": "trainer",
