@@ -85,9 +85,9 @@ const App = () => {
 		return data
 	}
 
-	const updateSkill = async(newSkill,id) =>{
-		const skillToUpdate = await getUserByID(id)
-		const updateSk = {...skillToUpdate,skill: newSkill}
+	const updateProfile = async(newSkill,id, newAvailability) =>{
+		const profileToUpdate = await getUserByID(id)
+		const updateSk = {...profileToUpdate,skill: newSkill, availability: newAvailability}
 
 		const res = await fetch(`http://localhost:5500/users/${id}`,{
 			method:'PUT',
@@ -185,7 +185,7 @@ const App = () => {
 				<Route path="staffdash" element={ userDetails.userType === "staff" ?
 					 <StaffDash addModule={addModule} addCourse={addCourse} courseDelete={deleteCourse} su = {systemUsers} ud = {userDetails} cd = {allCourses} Logout={Logout}/> : <Navigate to="/" />} />
 				<Route path="trainerdash" element={userDetails.userType === "trainer" ?
-				<TrainerDash updateSkill={updateSkill} ud = {userDetails} Logout={Logout}/> : <Navigate to="/" />} />
+				<TrainerDash updateProfile={updateProfile} ud = {userDetails} Logout={Logout}/> : <Navigate to="/" />} />
 			</Routes>
 		</Router>
 	  );

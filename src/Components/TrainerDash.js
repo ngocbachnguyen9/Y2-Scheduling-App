@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function TrainerDash({updateSkill,ud,Logout}) {
+function TrainerDash({updateProfile,ud,Logout}) {
 
   const [profileData,setProfileData] = useState({
     skill: ud.skill,
@@ -13,10 +13,10 @@ function TrainerDash({updateSkill,ud,Logout}) {
     setShowProfile(!showProfile)
   }
 
-  const submitSkill= e =>{
+  const submitProfile= e =>{
     e.preventDefault()
 
-    updateSkill(profileData.skill,ud.userID)
+    updateProfile(profileData.skill,ud.userID, profileData.availability)
     
     formUpdate()
   }
@@ -31,10 +31,13 @@ function TrainerDash({updateSkill,ud,Logout}) {
           <button onClick={Logout}>Logout</button>
           
   
-        <p><b>Profile:</b>{ud.skill}</p>
-        {showProfile && <form onSubmit={submitSkill}>
-          <input type="text" name="newSkill" id="newSkill" onChange={e => setProfileData({...profileData, skill: e.target.value})}/>
-          <input type="submit" value="update Skill"/>
+        <p><b>Profile:</b>Skill(s): {ud.skill}, General Availability: {ud.availability}</p>
+        {showProfile && <form onSubmit={submitProfile}>
+          <label>Skill:</label>
+          <input type="text" name="newSkill" id="newSkill" value={profileData.skill} onChange={e => setProfileData({...profileData, skill: e.target.value})}/>
+          <label>Availability: </label>
+          <input type="text" name="availability" id="availability" value={profileData.availability} onChange={e => setProfileData({...profileData, availability: e.target.value})}/>
+          <input type="submit" value="Update Profile"/>
         </form>}
 
         </div>

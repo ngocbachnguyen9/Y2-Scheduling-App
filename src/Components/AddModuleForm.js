@@ -4,6 +4,7 @@ import SearchTrainerForMod from './SearchTrainerForMod'
 const AddModuleForm = ({su,addModuleHandler}) => {
 
     const[text, setText] = useState('')
+    const[moduleName ,setModuleName] = useState('')
     const[startTime, setStartTime] = useState('')
     const[endTime, setEndTime] = useState('')
     const[trainer, setTrainer] = useState('')
@@ -12,7 +13,7 @@ const AddModuleForm = ({su,addModuleHandler}) => {
     const onSubmit = e =>{
 
         e.preventDefault()
-        addModuleHandler(text,startTime,endTime,trainer,trainerId)
+        addModuleHandler(moduleName,startTime,endTime,trainer,trainerId)
 
     }
 
@@ -37,6 +38,10 @@ const AddModuleForm = ({su,addModuleHandler}) => {
       <div>
           <SearchTrainerForMod search = {handleSearch} su={su} />
           {(trainerId !== '' && text !== '') && <form className='addModuleForm' onSubmit={onSubmit}>
+        <div className="form-control">
+            <label>Module Name</label>
+            <input type="text" value={moduleName} onChange={(e)=> setModuleName(e.target.value)} required/>
+        </div>
         <div className='form-control'>
             <label>Start day and time</label>
             <input type="datetime-local" value={startTime} onChange={(e)=> setStartTime(e.target.value)} required/>

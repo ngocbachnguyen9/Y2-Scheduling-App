@@ -85,8 +85,8 @@
       "email": "richard@FDM.org",
       "password": "123",
       "userType": "trainer",
-      "skill": "communications",
-      "availability": ""
+      "skill": "Good at Java",
+      "availability": "Every Friday at 3pm"
     },
     {
       "id": 3,
@@ -95,7 +95,7 @@
       "password": "123",
       "userType": "trainer",
       "skill": "Team Skills",
-      "availability": ""
+      "availability": "Every Monday at 7pm"
     },
     {
       "id": 4,

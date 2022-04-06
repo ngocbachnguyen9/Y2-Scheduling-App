@@ -59,7 +59,7 @@ const SearchTrainerForMod = ({search , su}) => {
         {trainerid !== '' ? 
             su.map(staff => staff.id == trainerid && (
                 <p key={staff.id}>
-                Trainer: {staff.name} Availability is: {staff.availability}
+                Trainer: {staff.name}, Availability is: {staff.availability}
                 </p>
             ) 
                 )
