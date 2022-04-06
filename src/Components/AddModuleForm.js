@@ -1,6 +1,7 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
+import SearchTrainerForMod from './SearchTrainerForMod'
 
-const AddModuleForm = ({addModuleHandler}) => {
+const AddModuleForm = ({su,addModuleHandler}) => {
 
     const[text, setText] = useState('')
     const[startTime, setStartTime] = useState('')
@@ -15,20 +16,27 @@ const AddModuleForm = ({addModuleHandler}) => {
 
     }
 
+    useEffect(()=>{
+
+        su.forEach(ut => {
+            if(trainerId == ut.id){
+                setTrainer(
+                    ut.name
+                )
+            }
+        });
+
+    },[trainerId])
+
+    const handleSearch = (skill,newTrainerId) => {
+        setTrainerId(newTrainerId)
+        setText(skill)
+    }
+
   return (
-    <form className='addModuleForm' onSubmit={onSubmit}>
-        <div className='form-control'>
-            <label>Module</label>
-            <input type="text" placeholder='Add Module' value={text} onChange={(e)=> setText(e.target.value)} required/>
-        </div>
-        <div className='form-control'>
-            <label>Trainer Name</label>
-            <input type="text" placeholder='Add Trainer Name' value={trainer} onChange={(e)=> setTrainer(e.target.value)} required/>
-        </div>
-        <div className='form-control'>
-            <label>TrainerID</label>
-            <input type="text" placeholder='Add Trainer Name' value={trainerId} onChange={(e)=> setTrainerId(e.target.value)} required/>
-        </div>
+      <div>
+          <SearchTrainerForMod search = {handleSearch} su={su} />
+          {(trainerId !== '' && text !== '') && <form className='addModuleForm' onSubmit={onSubmit}>
         <div className='form-control'>
             <label>Start day and time</label>
             <input type="datetime-local" value={startTime} onChange={(e)=> setStartTime(e.target.value)} required/>
@@ -40,7 +48,9 @@ const AddModuleForm = ({addModuleHandler}) => {
         <div>
         <input type="submit" value="add Module" />
         </div>
-    </form>
+    </form>}
+      </div>
+    
   )
 }
 

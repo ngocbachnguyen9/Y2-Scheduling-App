@@ -5,7 +5,7 @@ import AddModuleForm from './AddModuleForm'
 import Modules from './Modules'
 import Popup from './Popup'
 
-const Course = ({course, onDelete, addModule}) => {
+const Course = ({ su , course, onDelete, addModule}) => {
 
   const [popIsOpen,setPopIsOpen] = useState(false);
 
@@ -38,7 +38,7 @@ const Course = ({course, onDelete, addModule}) => {
         id: newId,
         moduleName: mName,
         trainerName: MTrainer,
-        trainerId: MtrainerId,
+        trainerId: parseInt(MtrainerId),
         startTime: moment(MStart).format('MMMM Do YYYY, h:mm a'),
         endTime: moment(MEnd).format('MMMM Do YYYY, h:mm a')
     })
@@ -56,7 +56,7 @@ const Course = ({course, onDelete, addModule}) => {
         <button onClick={togglePopup} className='btn'>Add Modules</button> 
         {popIsOpen && <Popup 
         content = {
-          <AddModuleForm addModuleHandler={handleAddModule}/>
+          <AddModuleForm su = {su} addModuleHandler={handleAddModule}/>
         }
           handleClose = {togglePopup}
         

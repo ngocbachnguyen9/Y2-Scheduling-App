@@ -4,8 +4,9 @@ const Module = ({module}) => {
   return (
     <div className='module'>
       <h3>{module.moduleName}</h3>
-      <p>{module.trainerID}</p>
-      <p>{module.startTime}-{module.endTime}</p>
+      <p>Module Trainer: {module.trainerName}</p>
+      <p>Start Time: {module.startTime}</p>
+      <p>End Time: {module.endTime}</p>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Courses from "./Courses";
 
 
-function StaffDash({ud, Logout, cd, courseDelete, addCourse, addModule} ) {
+function StaffDash({su, ud, Logout, cd, courseDelete, addCourse, addModule} ) {
 
   const [showAddCourse, setShowAddCourse] = useState(false)
 
@@ -43,7 +43,7 @@ function StaffDash({ud, Logout, cd, courseDelete, addCourse, addModule} ) {
               <input type="submit" value="Add Course" />
             </div>
           </form>}
-          <Courses courses={cd} onDelete={courseDelete} addModule={addModule}/>
+          <Courses su ={su} courses={cd} onDelete={courseDelete} addModule={addModule}/>
 
         </div>
       ) : (

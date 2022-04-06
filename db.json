@@ -1,69 +1,70 @@
 {
-    "courses": [{
-            "courseName": "Procedural Programming",
-            "courseLength": 0,
-            "activeCourse": false,
-            "modules": [{
-                "id": 1,
-                "moduleName": "PHP",
-                "trainerID": "richard",
-                "startTime": "April 14th 2022, 2:49 pm",
-                "endTime": "April 14th 2022, 4:49 pm"
-            }],
-            "id": 1
-        },
+  "courses": [
+    {
+      "courseName": "Procedural Programming",
+      "courseLength": 0,
+      "activeCourse": false,
+      "modules": [
         {
-            "courseName": "Object-Oriented Programming",
-            "courseLength": 0,
-            "activeCourse": false,
-            "modules": [],
-            "id": 2
-        },
-        {
-            "courseName": "Web Technology",
-            "courseLength": 0,
-            "activeCourse": false,
-            "modules": [],
-            "id": 3
-        },
-        {
-            "courseName": "Web Tech",
-            "courseLength": 0,
-            "activeCourse": false,
-            "modules": [{
-                "id": 1,
-                "moduleName": "Communications",
-                "trainerID": "richard",
-                "startTime": "April 13th 2022, 2:44 pm",
-                "endTime": "April 13th 2022, 4:44 pm"
-            }],
-            "id": 4
+          "id": 1,
+          "moduleName": "communications",
+          "trainerName": "Richard Harris",
+          "trainerId": 2,
+          "startTime": "April 7th 2022, 5:16 am",
+          "endTime": "April 13th 2022, 5:16 am"
         }
-    ],
-    "users": [{
-            "id": 1,
-            "name": "helos",
-            "email": "helos@FDM.org",
-            "password": "123",
-            "userType": "staff"
-        },
-        {
-            "id": 2,
-            "name": "richard",
-            "email": "richard@FDM.org",
-            "password": "123",
-            "userType": "trainer",
-            "skill": "communications",
-            "availability": ""
-        },
-        {
-            "id": 3,
-            "name": "harry",
-            "email": "harry@FDM.org",
-            "password": "123",
-            "userType": "trainer",
-            "skill": "Team Skills",
-            "availability": ""
-        }
-    ]
+      ],
+      "id": 1
+    },
+    {
+      "courseName": "Object-Oriented Programming",
+      "courseLength": 0,
+      "activeCourse": false,
+      "modules": [],
+      "id": 2
+    },
+    {
+      "courseName": "Web Technology",
+      "courseLength": 0,
+      "activeCourse": false,
+      "modules": [],
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Helos Arnold",
+      "email": "helos@FDM.org",
+      "password": "123",
+      "userType": "staff"
+    },
+    {
+      "id": 2,
+      "name": "Richard Harris",
+      "email": "richard@FDM.org",
+      "password": "123",
+      "userType": "trainer",
+      "skill": "communications",
+      "availability": ""
+    },
+    {
+      "id": 3,
+      "name": "harry",
+      "email": "harry@FDM.org",
+      "password": "123",
+      "userType": "trainer",
+      "skill": "Team Skills",
+      "availability": ""
+    },
+    {
+      "id": 4,
+      "name": "pete",
+      "email": "pete@FDM.org",
+      "password": "123",
+      "userType": "trainer",
+      "skill": "Team Skills",
+      "availability": ""
+    }
+  ]
 }
