@@ -13,21 +13,27 @@ const AddModuleForm = ({su,addModuleHandler}) => {
     const onSubmit = e =>{
 
         e.preventDefault()
-        addModuleHandler(moduleName,startTime,endTime,trainer,trainerId)
+        if (startTime === "invalid date" || endTime === "invalid date" || moduleName === "") {
+            window.alert("Please Enter Valid Data")
+        }
+        else{
+            addModuleHandler(moduleName,startTime,endTime,trainer,trainerId)
+
+        }
 
     }
 
     useEffect(()=>{
 
         su.forEach(ut => {
-            if(trainerId == ut.id){
+            if(parseInt(trainerId) === ut.id){
                 setTrainer(
                     ut.name
                 )
             }
         });
 
-    },[trainerId])
+    },[su,trainerId])
 
     const handleSearch = (skill,newTrainerId) => {
         setTrainerId(newTrainerId)

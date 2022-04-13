@@ -212,3 +212,8 @@ th {
     width: 75%;
     overflow: auto;
 }
+.calender{
+    width: 80vw;
+    height: 70vh;
+    margin: auto;
+}

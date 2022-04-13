@@ -4,7 +4,6 @@ const SearchTrainerForMod = ({search , su}) => {
 
 
     const [skill,setSkill] = useState()
-    const [Trainer, setTrainer] = useState('');
     const [trainerid,setTrainerid] = useState('')
 		// setAllCourses(allCourses.map((course) => course.id === courseId
 		// ? {...course,modules: data.modules} : course
@@ -48,7 +47,7 @@ const SearchTrainerForMod = ({search , su}) => {
             <select onChange={handleTrainerChange} defaultValue='selected' required>
                 <option value='selected'>Please Choose a Trainer</option>
                 {
-                    su.map((trainer) => ((trainer.userType == "trainer") && trainer.skill === skill) && (
+                    su.map((trainer) => ((trainer.userType === "trainer") && trainer.skill === skill) && (
                         <option value={trainer.id} key={trainer.id}>{trainer.name}</option>
                     ))
                 }
@@ -57,7 +56,7 @@ const SearchTrainerForMod = ({search , su}) => {
         </form>
 
         {trainerid !== '' ? 
-            su.map(staff => staff.id == trainerid && (
+            su.map(staff => staff.id === parseInt(trainerid) && (
                 <p key={staff.id}>
                 Trainer: {staff.name}, Availability is: {staff.availability}
                 </p>

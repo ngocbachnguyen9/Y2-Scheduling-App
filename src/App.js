@@ -185,7 +185,7 @@ const App = () => {
 				<Route path="staffdash" element={ userDetails.userType === "staff" ?
 					 <StaffDash addModule={addModule} addCourse={addCourse} courseDelete={deleteCourse} su = {systemUsers} ud = {userDetails} cd = {allCourses} Logout={Logout}/> : <Navigate to="/" />} />
 				<Route path="trainerdash" element={userDetails.userType === "trainer" ?
-				<TrainerDash updateProfile={updateProfile} ud = {userDetails} Logout={Logout}/> : <Navigate to="/" />} />
+				<TrainerDash cd = {allCourses} updateProfile={updateProfile} ud = {userDetails} Logout={Logout}/> : <Navigate to="/" />} />
 			</Routes>
 		</Router>
 	  );
