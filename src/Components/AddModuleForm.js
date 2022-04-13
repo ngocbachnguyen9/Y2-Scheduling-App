@@ -45,15 +45,15 @@ const AddModuleForm = ({su,addModuleHandler}) => {
           <SearchTrainerForMod search = {handleSearch} su={su} />
           {(trainerId !== '' && text !== '') && <form className='addModuleForm' onSubmit={onSubmit}>
         <div className="form-control">
-            <label>Module Name</label>
+            <label className='form-label'>Module Name</label>
             <input className='input-style' type="text" value={moduleName} onChange={(e)=> setModuleName(e.target.value)} required/>
         </div>
         <div className='form-control'>
-            <label>Start day and time</label>
+            <label className='form-label'>Start day and time</label>
             <input className='input-style' type="datetime-local" value={startTime} onChange={(e)=> setStartTime(e.target.value)} required/>
         </div>
         <div className='form-control'>
-            <label>End day and time</label>
+            <label className='form-label'>End day and time</label>
             <input className='input-style' type="datetime-local" value={endTime} onChange={(e)=> setEndTime(e.target.value)} required/>
         </div>
         <div>
