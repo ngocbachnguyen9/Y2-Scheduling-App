@@ -328,6 +328,8 @@ th {
       }
 
 .calender{
-    width: 80%;
+    width: 85%;
+    position: relative;
+    left:15%;
 }
 
