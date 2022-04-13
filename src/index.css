@@ -212,3 +212,35 @@ th {
     width: 75%;
     overflow: auto;
 }
+
+
+
+/*trainerDash*/
+.trainer-dash-box-smaller{
+    width: 15%;
+    position: absolute;
+    padding-top:6rem;
+        background-image: linear-gradient(135deg, #4700D8, #9900F0);
+        height: 100%
+}
+.trainer-dash-box{
+    width: 85%;
+    position: relative;
+    left:15%;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.btn-pos{
+    position: absolute;
+    left: 85%;
+    top:5%;
+    
+    
+}
+
+.btn-pos1{
+    margin:auto;
+    margin-top: 1rem;
+
+}
