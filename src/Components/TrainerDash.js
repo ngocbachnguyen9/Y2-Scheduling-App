@@ -53,7 +53,9 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
           <button className="btn btn-pos1" onClick={changeTimeTableView}>View Timetable</button>
           
   
-        <p><b>Profile:</b> Skill(s): {ud.skill},<br/> General Availability: {ud.availability}</p>
+        <p><b>Profile:</b> 
+          <br></br>
+        Skill(s): {ud.skill},<br/> General Availability: {ud.availability}</p>
         {showProfile && <form onSubmit={submitProfile}>
           <label>Skill:</label>
           <input type="text" name="newSkill" id="newSkill" value={profileData.skill} onChange={e => setProfileData({...profileData, skill: e.target.value})}/>
