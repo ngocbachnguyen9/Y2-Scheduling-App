@@ -1,3 +1,4 @@
+*{margin:0; padding:0;}
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -151,8 +152,10 @@ th {
     display: block;
     background: #dddddd;
     margin: 5px;
-    padding: 10px 20px;
+    padding: 15px 25px;
     border-radius: 1em;
+    width:90%;
+    margin:5px auto;
 }
 
 .course h3 {
@@ -212,8 +215,115 @@ th {
     width: 75%;
     overflow: auto;
 }
-.calender{
-    width: 80vw;
-    height: 70vh;
-    margin: auto;
+
+
+
+/*trainerDash*/
+.trainer-dash-box-smaller{
+    width: 15%;
+    position: absolute;
+    height: 100%;
+        
 }
+
+.trainer-dash-box-smaller,.box{
+    background: linear-gradient(-45deg, #1daded, #8820bb, #1541c8);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.trainer-dash-box{
+    width: 85%;
+    position: relative;
+    left:15%;
+    height: 100%;
+    text-align: center;
+
+    padding-top: 2rem;
+    padding-bottom: 9rem;
+}
+
+.btn-pos{
+    position: absolute;
+    left: 85%;
+    top:5%;
+    
+    
+}
+
+.btn-pos1{
+    margin:auto;
+    margin-top: 1rem;
+
+}
+
+.btn-pos2{
+    margin:auto;
+    margin-top: 1rem;
+    position: relative;
+    top: 5rem;
+    
+}
+
+.title{
+    text-decoration: underline;
+    margin-top: 0;
+    text-align: center;
+}
+.big-box{
+    minimum-height: 100%;
+    height: 100%;
+}
+
+.input-style{
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.input-style:focus {
+    outline: none;
+    border: 3px solid black;
+    transition: 0.4s ease-in-out;
+    width: 70%;
+  }
+
+.form-label{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #eeeeee;
+}
+
+.form-label1{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: black;
+}
+
+.btn-course{
+    width: 20%;
+}
+  
+
+.btn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #1541c8;
+    transition: 0.4s ease-in-out;
+      }
+
