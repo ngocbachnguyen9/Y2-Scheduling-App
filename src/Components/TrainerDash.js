@@ -42,7 +42,8 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
           <br></br>
           <img src="https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png" alt="W3Schools.com"></img>
           <br></br>
-          <br></br>  <br></br>
+          <br></br> 
+          <br></br>
           <h3>Name: </h3>
           <br></br>
           <h3>Course:</h3>
@@ -60,7 +61,7 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
           <input type="text" name="availability" id="availability" value={profileData.availability} onChange={e => setProfileData({...profileData, availability: e.target.value})}/>
           <input type="submit" value="Update Profile"/>
         </form>}
-
+        </div>
         </div>
       ) : (
         <div>
@@ -71,7 +72,7 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
       
       {showTimeTableView &&
       <Schdule />
-}
+
     </div>
   );
 }
