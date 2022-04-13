@@ -38,7 +38,7 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
         </div>
 
         <div className="trainer-dash-box">
-          <h1 className="title">Welcome, {ud.name}</h1>
+          <h1 className="title">Welcome {ud.name}</h1>
           <br></br>
           <img src="https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png" alt="W3Schools.com"></img>
           <br></br>
