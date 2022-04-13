@@ -46,18 +46,18 @@ const AddModuleForm = ({su,addModuleHandler}) => {
           {(trainerId !== '' && text !== '') && <form className='addModuleForm' onSubmit={onSubmit}>
         <div className="form-control">
             <label>Module Name</label>
-            <input type="text" value={moduleName} onChange={(e)=> setModuleName(e.target.value)} required/>
+            <input className='input-style' type="text" value={moduleName} onChange={(e)=> setModuleName(e.target.value)} required/>
         </div>
         <div className='form-control'>
             <label>Start day and time</label>
-            <input type="datetime-local" value={startTime} onChange={(e)=> setStartTime(e.target.value)} required/>
+            <input className='input-style' type="datetime-local" value={startTime} onChange={(e)=> setStartTime(e.target.value)} required/>
         </div>
         <div className='form-control'>
             <label>End day and time</label>
-            <input type="datetime-local" value={endTime} onChange={(e)=> setEndTime(e.target.value)} required/>
+            <input className='input-style' type="datetime-local" value={endTime} onChange={(e)=> setEndTime(e.target.value)} required/>
         </div>
         <div>
-        <input type="submit" value="add Module" />
+        <input className='btn btn-pos1' type="submit" value="add Module" />
         </div>
     </form>}
       </div>
