@@ -62,6 +62,7 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
           <input type="submit" value="Update Profile"/>
         </form>}
         </div>
+         </div>
       
       ) : (
         <div>
@@ -73,7 +74,7 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
       {showTimeTableView &&
       <Schdule />
 
-    </div>
+      }</div>
   );
 }
 
