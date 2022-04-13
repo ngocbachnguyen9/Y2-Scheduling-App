@@ -25,9 +25,14 @@ function StaffDash({ud, Logout, cd, courseDelete, addCourse, addModule} ) {
     
     <div className="StaffDash">
       {(ud.userType === "staff") ? (
-        <div>
+        <div style={{ height: 100}}>
+        <div className="trainer-dash-box-smaller">
+        <button className="btn btn-pos2" >Create Course</button>
+        <button className="btn btn-pos2" >Create Course</button>
+        </div>
+        <div className="trainer-dash-box">
           <div className="mainHeader">
-          <h1>Welcome, {ud.name}</h1>
+          <h1 className="title">Welcome {ud.name}</h1>
           <button className="btn" style={{backgroundColor:"#4427fa"}} onClick={Logout}>Logout</button>
           </div>
           <div className="sdHeader">
@@ -36,15 +41,17 @@ function StaffDash({ud, Logout, cd, courseDelete, addCourse, addModule} ) {
           </div>
           {showAddCourse && <form onSubmit={courseAddHandler}>
             <div className="course-form-container">
-              <label>Course Name </label>
-              <input type="text" name="courseName" id="course-name" required/>
+              <label className="form-label1">Course Name: </label>
+              <br></br>
+              <input className='input-style' placeholder='Add Course Name' type="text" name="courseName" id="course-name" required/>
             </div>
             <div className="submit-container">
-              <input type="submit" value="Add Course" />
+              <input className="btn btn-pos1 btn-course" type="submit" value="Add Course" />
             </div>
+            <br></br>
           </form>}
           <Courses courses={cd} onDelete={courseDelete} addModule={addModule}/>
-
+          </div>
         </div>
       ) : (
         <div>
