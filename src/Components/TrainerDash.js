@@ -66,7 +66,7 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
           <br></br>
           <input className="btn btn-pos1" type="submit" value="Update Profile Details"/>
         </form>}
-        <hr></hr>
+   
         <button className="btn btn-pos1" onClick={changeTimeTableView}>View Timetable</button>
          
         </div>
