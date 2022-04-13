@@ -62,7 +62,7 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
           <input type="submit" value="Update Profile"/>
         </form>}
         </div>
-        </div>
+      
       ) : (
         <div>
           <p>You are not authorised here</p>
