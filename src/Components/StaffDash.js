@@ -31,26 +31,31 @@ function StaffDash({su, ud, Logout, cd, courseDelete, addCourse, addModule} ) {
           <button className="btn btn-pos2" >Create Course</button>
         <button className="btn btn-pos2" >Create Course</button>
           </div>
+    
       <div className="trainer-dash-box">
           <div className="mainHeader">
           <h1 className="title">Welcome, {ud.name}</h1>
           <button className="btn" style={{backgroundColor:"#4427fa"}} onClick={Logout}>Logout</button>
           </div>
+
           <div className="sdHeader">
             <h2>Courses</h2>          
             <button className="btn" onClick={addCourseView}>Create Course</button>
           </div>
+
           {showAddCourse && <form onSubmit={courseAddHandler}>
             <div className="course-form-container">
               <label className="form-label1">Course Name </label>
               <input className='input-style' type="text" name="courseName" id="course-name" required/>
             </div>
+           
             <div className="submit-container">
               <input className="btn btn-pos1 btn-course" type="submit" value="Add Course" />
             </div>
+           
           </form>}
           <Courses su ={su} courses={cd} onDelete={courseDelete} addModule={addModule}/>
-
+        </div>
         </div>
       ) : (
         <div>
