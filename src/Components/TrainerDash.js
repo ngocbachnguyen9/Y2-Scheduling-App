@@ -50,7 +50,6 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
           <br></br>
           <button className="btn btn-pos1" onClick={formUpdate}>Update Profile</button>
           <button className="btn btn-pos" onClick={Logout}>Logout</button>
-          <button className="btn btn-pos1" onClick={changeTimeTableView}>View Timetable</button>
           
   
         <p><b>Profile:</b> 
@@ -61,8 +60,11 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
           <input type="text" name="newSkill" id="newSkill" value={profileData.skill} onChange={e => setProfileData({...profileData, skill: e.target.value})}/>
           <label>Availability: </label>
           <input type="text" name="availability" id="availability" value={profileData.availability} onChange={e => setProfileData({...profileData, availability: e.target.value})}/>
-          <input type="submit" value="Update Profile"/>
+          <input cl type="submit" value="Update Profile"/>
         </form>}
+
+        <button className="btn btn-pos1" onClick={changeTimeTableView}>View Timetable</button>
+         
         </div>
         </div>
       
