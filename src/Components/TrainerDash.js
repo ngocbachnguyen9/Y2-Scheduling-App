@@ -30,11 +30,26 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
   return (
     <div className="TrainerDash">
       {(ud.userType === "trainer") ? (
-        <div>
-          <h1>Welcome, {ud.name}</h1>
-          <button onClick={formUpdate}>Update Profile</button>
-          <button onClick={changeTimeTableView}>View Timetable</button>
-          <button onClick={Logout}>Logout</button>
+        <div className="big-box">
+        
+        <div className="trainer-dash-box-smaller">
+        <button className="btn btn-pos2" >Create Course</button>
+        <button className="btn btn-pos2" >Create Course</button>
+        </div>
+
+        <div className="trainer-dash-box">
+          <h1 className="title">Welcome, {ud.name}</h1>
+          <br></br>
+          <img src="https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png" alt="W3Schools.com"></img>
+          <br></br>
+          <br></br>  <br></br>
+          <h3>Name: </h3>
+          <br></br>
+          <h3>Course:</h3>
+          <br></br>
+          <button lassName="btn btn-pos1" onClick={formUpdate}>Update Profile</button>
+          <button lassName="btn btn-pos1" onClick={changeTimeTableView}>View Timetable</button>
+          <button lassName="btn btn-pos" onClick={Logout}>Logout</button>
           
   
         <p><b>Profile:</b> Skill(s): {ud.skill},<br/> General Availability: {ud.availability}</p>
