@@ -48,9 +48,9 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
           <br></br>
           <h3>Course:</h3>
           <br></br>
-          <button lassName="btn btn-pos1" onClick={formUpdate}>Update Profile</button>
-          <button lassName="btn btn-pos1" onClick={changeTimeTableView}>View Timetable</button>
-          <button lassName="btn btn-pos" onClick={Logout}>Logout</button>
+          <button className="btn btn-pos1" onClick={formUpdate}>Update Profile</button>
+          <button className="btn btn-pos1" onClick={changeTimeTableView}>View Timetable</button>
+          <button className="btn btn-pos" onClick={Logout}>Logout</button>
           
   
         <p><b>Profile:</b> Skill(s): {ud.skill},<br/> General Availability: {ud.availability}</p>
