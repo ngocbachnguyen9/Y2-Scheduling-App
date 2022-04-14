@@ -43,15 +43,15 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
         <div className="big-box">
         <div className="trainer-dash-box-smaller">
           <Par />
+          <h3 className="title">Welcome {ud.name}</h3>
         <button className="btn btn-pos2" onClick={changeViewProfile} style={{backgroundColor:"#4427fa"}} >View Profile</button>
         <button className="btn btn-pos2" onClick={changeTimeTableView} style={{backgroundColor:"#4427fa"}} >View Timetable</button>
         <button className="btn btn-pos2" onClick={Logout} style={{backgroundColor:"#4427fa"}} >Logout</button>
         </div>
         {showProfile &&
         <div className="trainer-dash-box">
-          <h1 className="title">Welcome {ud.name}</h1>
           <br></br>
-          <img src="https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png" alt="W3Schools.com"></img>
+          <img src="https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png" alt="W3Schools.com" style={{border: "solid black 1px",borderRadius:"1em"}}></img>
           <br></br>
           <br></br> 
           <br></br>

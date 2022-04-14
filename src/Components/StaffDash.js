@@ -28,6 +28,7 @@ function StaffDash({su, ud, Logout, cd, courseDelete, addCourse, addModule} ) {
       {(ud.userType === "staff") ? (
         <div>
         <div className="trainer-dash-box-smaller"> <Par />
+        <h3 className="title">Welcome {ud.name}</h3>
         <button className="btn btn-pos2" style={{backgroundColor:"#4427fa"}} >View Course</button>
         <button className="btn btn-pos2" style={{backgroundColor:"#4427fa"}} onClick={Logout}>Logout</button>
 
