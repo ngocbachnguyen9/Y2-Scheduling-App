@@ -1,82 +1,60 @@
 {
   "courses": [
     {
-      "courseName": "Procedural Programming",
-      "courseLength": 7,
+      "courseName": "Business etiquette",
+      "courseLength": 6,
       "activeCourse": true,
       "modules": [
         {
           "id": 1,
-          "moduleName": "communications",
-          "trainerName": "Richard Harris",
-          "trainerId": 2,
-          "startTime": "April 14th 2022, 5:40 am",
-          "endTime": "April 14th 2022, 7:40 am"
+          "moduleName": "Auditting Skills",
+          "trainerName": "Uwais Ishaq",
+          "trainerId": "13",
+          "startTime": "April 8th 2022, 11:00 am",
+          "endTime": "April 8th 2022, 2:00 am"
         },
         {
           "id": 2,
-          "moduleName": "Team Skills",
-          "trainerName": "pete",
-          "trainerId": 4,
-          "startTime": "April 14th 2022, 5:40 am",
-          "endTime": "April 21st 2022, 5:40 am"
+          "moduleName": "Networking Skills",
+          "trainerName": "Nabeel Satar",
+          "trainerId": "9",
+          "startTime": "April 15th 2022, 3:00 pm",
+          "endTime": "April 15th 2022, 6:00 pm"
         },
         {
           "id": 3,
-          "moduleName": "communications",
+          "moduleName": "Powerpoint skills",
           "trainerName": "Richard Harris",
-          "trainerId": 2,
-          "startTime": "April 2nd 2022, 5:40 am",
-          "endTime": "April 15th 2022, 5:40 am"
+          "trainerId": "12",
+          "startTime": "April 19th 2022, 2:00 pm",
+          "endTime": "April 19th 2020, 4:00 pm"
         },
         {
           "id": 4,
-          "moduleName": "communications",
-          "trainerName": "Richard Harris",
-          "trainerId": 2,
-          "startTime": "April 16th 2022, 5:40 am",
-          "endTime": "April 22nd 2022, 5:41 am"
+          "moduleName": "Change your minds",
+          "trainerName": "Yogesh Patel",
+          "trainerId": "10",
+          "startTime": "May 2nd 2022, 7:00 pm",
+          "endTime": "May 2nd 2022, 9:00 pm"
         },
         {
           "id": 5,
-          "moduleName": "communications",
-          "trainerName": "Richard Harris",
-          "trainerId": 2,
-          "startTime": "April 13th 2022, 5:41 am",
-          "endTime": "April 20th 2022, 5:41 am"
+          "moduleName": "Become one together",
+          "trainerName": "Harry Osborn",
+          "trainerId": "3",
+          "startTime": "April 4th 2022, 7:00 pm",
+          "endTime": "April 4th 2022, 7:30 pm"
         },
         {
           "id": 6,
-          "moduleName": "Team Skills",
-          "trainerName": "harry",
-          "trainerId": 3,
-          "startTime": "April 14th 2022, 5:41 am",
-          "endTime": "April 15th 2022, 5:41 am"
-        },
-        {
-          "id": 7,
-          "moduleName": "Hello",
-          "trainerName": "Pete Davis",
-          "trainerId": "4",
-          "startTime": "April 24th 2022, 3:45 am",
-          "endTime": "April 21st 2022, 3:45 am"
+          "moduleName": "E-Commerce Revenues",
+          "trainerName": "Karim Fawas",
+          "trainerId": "11",
+          "startTime": "April 22nd 2022, 12:00 pm",
+          "endTime": "April 22nd 2022, 1:30 pm"
         }
       ],
       "id": 1
-    },
-    {
-      "courseName": "Object-Oriented Programming",
-      "courseLength": 0,
-      "activeCourse": false,
-      "modules": [],
-      "id": 2
-    },
-    {
-      "courseName": "Web Technology",
-      "courseLength": 0,
-      "activeCourse": false,
-      "modules": [],
-      "id": 3
     }
   ],
   "users": [
@@ -112,7 +90,88 @@
       "password": "123",
       "userType": "trainer",
       "skill": "Team Skills",
-      "availability": ""
+      "availability": "Every Thursday and Wednesday at 1pm"
+    },
+    {
+      "id": 12,
+      "name": "Richard Harris",
+      "email": "richard@FDM.org",
+      "password": "123",
+      "userType": "trainer",
+      "skill": "Powerpoint Skills",
+      "availability": "Every Tuesday at 2pm"
+    },
+    {
+      "id": 13,
+      "name": "Uwais Ishaq",
+      "email": "uwii@FDM.org",
+      "password": "123",
+      "userType": "trainer",
+      "skill": "Auditing",
+      "availability": "Every Friday at 11am"
+    },
+    {
+      "id": 5,
+      "name": "Shyam Murugan",
+      "email": "shyam@FDM.org",
+      "password": "123",
+      "userType": "trainer",
+      "skill": "Auditing",
+      "availability": "Every day from 1 to 4pm"
+    },
+    {
+      "id": 6,
+      "name": "hamazah Mushtaq",
+      "email": "hamazah@FDM.org",
+      "password": "123",
+      "userType": "trainer",
+      "skill": "communications",
+      "availability": "Every Wednesday to Friday from 3pm to 6pm"
+    },
+    {
+      "id": 7,
+      "name": "Mustafa Qamar",
+      "email": "Mustafa@FDM.org",
+      "password": "123",
+      "userType": "trainer",
+      "skill": "Career Advice",
+      "availability": "Only available Monday to Thursday any time"
+    },
+    {
+      "id": 8,
+      "name": "Hasnain Jaffrey",
+      "email": "Hasnain@FDM.org",
+      "password": "123",
+      "userType": "trainer",
+      "skill": "communications",
+      "availability": "Every Monday at 7pm"
+    },
+    {
+      "id": 9,
+      "name": "Nabeel Satar",
+      "email": "Nabeel@FDM.org",
+      "password": "123",
+      "userType": "trainer",
+      "skill": "Networking",
+      "availability": "Every Friday at 3pm"
+    },
+    {
+      "id": 10,
+      "name": "Yogesh Patel",
+      "email": "Yogesh@FDM.org",
+      "password": "123",
+      "userType": "trainer",
+      "skill": "Mindful Thinking",
+      "availability": "Every Monday at 7pm"
+    },
+    {
+      "id": 11,
+      "name": "Karim Fawas",
+      "email": "Karim@FDM.org",
+      "password": "123",
+      "userType": "trainer",
+      "skill": "Commercial Awareness",
+      "availability": "Every Monday at 7pm"
     }
   ]
 }

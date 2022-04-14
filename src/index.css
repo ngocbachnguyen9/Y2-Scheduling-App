@@ -206,7 +206,9 @@ th {
 
 .box {
     position: relative;
-    background: #e7e7e7;
+    background-image: linear-gradient(rgb(0, 1, 51) 0%, rgb(15, 16, 72) 100%);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
     padding: 1em;
     border-radius: 1em;
     margin: 0 auto;
@@ -227,7 +229,7 @@ th {
         
 }
 
-.trainer-dash-box-smaller,.box{
+.trainer-dash-box-smaller{
     position: fixed;
     background-image: linear-gradient(rgb(0, 1, 51) 0%, rgb(15, 16, 72) 100%);
 	background-size: 400% 400%;
