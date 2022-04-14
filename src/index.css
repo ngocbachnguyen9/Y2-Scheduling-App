@@ -235,6 +235,12 @@ th {
 	height: 100vh;
 }
 
+.box{
+    position: relative;
+    width: 50%;
+   margin: auto;
+}
+
 
 @keyframes gradient {
 	0% {
