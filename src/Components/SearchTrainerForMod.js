@@ -43,7 +43,7 @@ const SearchTrainerForMod = ({search , su}) => {
                     ))
                 }
             </select>
-
+            <br></br>
             <select onChange={handleTrainerChange} defaultValue='selected' required>
                 <option value='selected'>Please Choose a Trainer</option>
                 {
