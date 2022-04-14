@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Courses from "./Courses";
+import Par from "./Par";
 
 
 function StaffDash({su, ud, Logout, cd, courseDelete, addCourse, addModule} ) {
@@ -26,13 +27,14 @@ function StaffDash({su, ud, Logout, cd, courseDelete, addCourse, addModule} ) {
     <div className="StaffDash">
       {(ud.userType === "staff") ? (
         <div>
-        <div className="trainer-dash-box-smaller">
-        <button className="btn btn-pos2" >View Course</button>
+        <div className="trainer-dash-box-smaller"> <Par />
+        <button className="btn btn-pos2" style={{backgroundColor:"#4427fa"}} >View Course</button>
+        <button className="btn btn-pos2" style={{backgroundColor:"#4427fa"}} onClick={Logout}>Logout</button>
+
         </div>
         <div className="trainer-dash-box">
           <div className="mainHeader">
           <h1 className="title title-align">Welcome {ud.name}</h1>
-          <button className="btn" style={{backgroundColor:"#4427fa"}} onClick={Logout}>Logout</button>
           </div>
           <div className="sdHeader">
             <h2 className="title-align">Courses</h2>          

@@ -201,7 +201,7 @@ th {
     height: 100vh;
     left: 0;
     top: 0;
-    z-index: 1;
+    
 }
 
 .box {
@@ -229,7 +229,7 @@ th {
 
 .trainer-dash-box-smaller,.box{
     position: fixed;
-    background: linear-gradient(-45deg, #1daded, #8820bb, #1541c8);
+    background-image: linear-gradient(rgb(0, 1, 51) 0%, rgb(15, 16, 72) 100%);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
 	height: 100vh;

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Par from "./Par";
 import Schdule from "./Schdule";
 
 function TrainerDash({updateProfile,ud,Logout,cd}) {
@@ -8,15 +9,23 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
     availability: ud.availability
   })
 
-  const [showProfile, setShowProfile] = useState(false)
+  const [showProfileUpdate, setShowProfileUpdate] = useState(false)
 
   const [showTimeTableView, setTimeTableView] = useState(false)
 
+  const [showProfile , setShowProfile] = useState(true)
+
   const formUpdate = () =>{
-    setShowProfile(!showProfile)
+    setShowProfileUpdate(!showProfileUpdate)
+  }
+  const changeViewProfile = () => { 
+    setShowProfile(true)
+    setTimeTableView(false)
+
   }
   const changeTimeTableView = () => {
-    setTimeTableView(!showTimeTableView)
+    setTimeTableView(true)
+    setShowProfile(false)
   }
 
   const submitProfile= e =>{
@@ -30,13 +39,15 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
   return (
     <div className="TrainerDash">
       {(ud.userType === "trainer") ? (
-        <div className="big-box">
-        
-        <div className="trainer-dash-box-smaller">
-        <button className="btn btn-pos2" >Create Course</button>
-        <button className="btn btn-pos2" >Create Course</button>
-        </div>
 
+        <div className="big-box">
+        <div className="trainer-dash-box-smaller">
+          <Par />
+        <button className="btn btn-pos2" onClick={changeViewProfile} style={{backgroundColor:"#4427fa"}} >View Profile</button>
+        <button className="btn btn-pos2" onClick={changeTimeTableView} style={{backgroundColor:"#4427fa"}} >View Timetable</button>
+        <button className="btn btn-pos2" onClick={Logout} style={{backgroundColor:"#4427fa"}} >Logout</button>
+        </div>
+        {showProfile &&
         <div className="trainer-dash-box">
           <h1 className="title">Welcome {ud.name}</h1>
           <br></br>
@@ -46,14 +57,12 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
           <br></br>
           <br></br>
           <button className="btn btn-pos1" onClick={formUpdate}>Update Profile</button>
-          <br></br>
-          <button className="btn btn-pos" onClick={Logout}>Logout</button>
-          
+          <br></br>          
   
         <p><b>Profile:</b> 
           <br></br>
         Skill(s): {ud.skill},<br/> General Availability: {ud.availability}</p>
-        {showProfile && <form onSubmit={submitProfile}>
+        {showProfileUpdate && <form onSubmit={submitProfile}>
           <br></br>
           <label>Skill:</label>
           <input type="text" name="newSkill" id="newSkill" value={profileData.skill} onChange={e => setProfileData({...profileData, skill: e.target.value})}/>
@@ -64,9 +73,9 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
           <input className="btn btn-pos1" type="submit" value="Update Profile Details"/>
         </form>}
    
-        <button className="btn btn-pos1" onClick={changeTimeTableView}>View Timetable</button>
          
         </div>
+}
         </div>
       
       ) : (
