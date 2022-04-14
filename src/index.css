@@ -289,14 +289,14 @@ th {
     height: 100%;
 }
 
-.input-style{
+.input-style, option{
     width: 60%;
     padding: 12px 20px;
     margin: 8px 0;
     font-family: "Roboto", sans-serif;
 }
 
-.input-style:focus {
+.input-style:focus, option:focus {
     outline: none;
     border: 3px solid black;
     transition: 0.4s ease-in-out;

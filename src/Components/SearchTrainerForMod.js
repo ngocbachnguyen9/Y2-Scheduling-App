@@ -52,7 +52,8 @@ const SearchTrainerForMod = ({search , su}) => {
                     ))
                 }
             </select>
-            <input type="submit" />
+            <br></br>
+            <input className='btn btn-pos1' type="submit" />
         </form>
 
         {trainerid !== '' ? 
