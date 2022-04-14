@@ -33,7 +33,7 @@ const SearchTrainerForMod = ({search , su}) => {
         
 
   return (
-    <div>
+    <div className='box'>
         <form onSubmit={handleSubmit}>
             <select defaultValue='selected' onChange={handleSkillChange}required>
             <option value='selected' disabled>Please Choose a Skill</option>
