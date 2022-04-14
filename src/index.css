@@ -296,11 +296,13 @@ th {
     font-family: "Roboto", sans-serif;
 }
 
-.input-style:focus{
+.input-style:focus,select:focus{
     outline: none;
     border: 3px solid black;
+    padding: 12px 20px;
+    margin: 8px 0;
     transition: 0.4s ease-in-out;
-    width: 70%;
+  
   }
 
 .form-label{
@@ -333,3 +335,6 @@ th {
     left:15%;
 }
 
+.textcol{
+    color: #eeeeee;
+}

@@ -58,16 +58,17 @@ const SearchTrainerForMod = ({search , su}) => {
 
         {trainerid !== '' ? 
             su.map(staff => staff.id === parseInt(trainerid) && (
-                <p key={staff.id}>
+                <p className='textcol' key={staff.id}>
                 Trainer: {staff.name}, Availability is: {staff.availability}
                 </p>
             ) 
                 )
         :
-        <p>
+        <br></br>}
+        <p className='textcol'>
             Please select a trainer to proceed
         </p>
-        }
+        
     </div>
   )
 }
