@@ -283,6 +283,7 @@ th {
     text-decoration: underline;
     margin-top: 0;
     text-align: center;
+    padding-left: 1rem;
 }
 .big-box{
     minimum-height: 100%;
