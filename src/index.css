@@ -201,6 +201,7 @@ th {
     height: 100vh;
     left: 0;
     top: 0;
+    z-index: 1;
 }
 
 .box {
@@ -227,6 +228,7 @@ th {
 }
 
 .trainer-dash-box-smaller,.box{
+    position: fixed;
     background: linear-gradient(-45deg, #1daded, #8820bb, #1541c8);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
@@ -283,7 +285,6 @@ th {
     text-decoration: underline;
     margin-top: 0;
     text-align: center;
-    padding-left: 1rem;
 }
 .big-box{
     minimum-height: 100%;
@@ -341,5 +342,5 @@ th {
 }
 
 .title-align{
-    padding-left: 3rem;
+    padding-left: 2rem;
 }

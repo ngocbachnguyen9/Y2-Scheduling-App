@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Courses from "./Courses";
 
 
-function StaffDash({ud, Logout, cd, courseDelete, addCourse, addModule} ) {
+function StaffDash({su, ud, Logout, cd, courseDelete, addCourse, addModule} ) {
 
   const [showAddCourse, setShowAddCourse] = useState(false)
 
@@ -27,8 +27,7 @@ function StaffDash({ud, Logout, cd, courseDelete, addCourse, addModule} ) {
       {(ud.userType === "staff") ? (
         <div>
         <div className="trainer-dash-box-smaller">
-        <button className="btn btn-pos2" >Create Course</button>
-        <button className="btn btn-pos2" >Create Course</button>
+        <button className="btn btn-pos2" >View Course</button>
         </div>
         <div className="trainer-dash-box">
           <div className="mainHeader">
@@ -50,7 +49,7 @@ function StaffDash({ud, Logout, cd, courseDelete, addCourse, addModule} ) {
             </div>
             <br></br>
           </form>}
-          <Courses courses={cd} onDelete={courseDelete} addModule={addModule}/>
+          <Courses su ={su} courses={cd} onDelete={courseDelete} addModule={addModule}/>
           </div>
         </div>
       ) : (

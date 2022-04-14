@@ -2,7 +2,7 @@
   "courses": [
     {
       "courseName": "Procedural Programming",
-      "courseLength": 6,
+      "courseLength": 7,
       "activeCourse": true,
       "modules": [
         {
@@ -52,6 +52,14 @@
           "trainerId": 3,
           "startTime": "April 14th 2022, 5:41 am",
           "endTime": "April 15th 2022, 5:41 am"
+        },
+        {
+          "id": 7,
+          "moduleName": "Hello",
+          "trainerName": "Pete Davis",
+          "trainerId": "4",
+          "startTime": "April 24th 2022, 3:45 am",
+          "endTime": "April 21st 2022, 3:45 am"
         }
       ],
       "id": 1

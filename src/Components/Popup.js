@@ -4,7 +4,7 @@ import {FaTimes} from 'react-icons/fa'
 const Popup = (props) => {
   return (
       <div className='popup-box'>
-        <div className="box">
+        <div className="not-box">
             <FaTimes style={{cursor:'pointer'}} onClick={props.handleClose}/>
             {props.content}
         </div>
