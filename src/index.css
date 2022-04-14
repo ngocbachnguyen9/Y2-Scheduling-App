@@ -289,7 +289,7 @@ th {
     height: 100%;
 }
 
-.input-style{
+.input-style,select{
     width: 60%;
     padding: 12px 20px;
     margin: 8px 0;
