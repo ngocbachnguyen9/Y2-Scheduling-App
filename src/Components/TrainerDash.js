@@ -44,9 +44,6 @@ function TrainerDash({updateProfile,ud,Logout,cd}) {
           <br></br>
           <br></br> 
           <br></br>
-          <h3>Name: </h3>
-          <br></br>
-          <h3>Course:</h3>
           <br></br>
           <button className="btn btn-pos1" onClick={formUpdate}>Update Profile</button>
           <br></br>
