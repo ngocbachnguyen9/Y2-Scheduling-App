@@ -238,7 +238,7 @@ th {
 .box{
     position: relative;
     width: 50%;
-    left:50%;
+   margin: auto;
 }
 
 
