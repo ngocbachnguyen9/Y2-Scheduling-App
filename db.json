@@ -55,6 +55,54 @@
         }
       ],
       "id": 1
+    },
+    {
+      "courseName": "How to Run a business",
+      "courseLength": 5,
+      "activeCourse": false,
+      "modules": [
+        {
+          "id": 1,
+          "moduleName": "Progress your life",
+          "trainerName": "Mustafa Qamar",
+          "trainerId": "7",
+          "startTime": "March 28th 2022, 10:00 am",
+          "endTime": "March 28th 2022, 12:30 pm"
+        },
+        {
+          "id": 2,
+          "moduleName": "Be better",
+          "trainerName": "Shyam Murugan",
+          "trainerId": "5",
+          "startTime": "April 5th 2022, 1:00 pm",
+          "endTime": "April 5th 2022, 2:00 pm"
+        },
+        {
+          "id": 3,
+          "moduleName": "Be a great baller",
+          "trainerName": "Yogesh Patel",
+          "trainerId": "10",
+          "startTime": "April 11th 2022, 7:00 pm",
+          "endTime": "April 11th 2022, 7:30 pm"
+        },
+        {
+          "id": 4,
+          "moduleName": "Powerpoint skills",
+          "trainerName": "Richard Harris",
+          "trainerId": "12",
+          "startTime": "April 19th 2022, 2:00 pm",
+          "endTime": "April 19th 2022, 3:00 pm"
+        },
+        {
+          "id": 5,
+          "moduleName": "Grow your connections",
+          "trainerName": "Nabeel Satar",
+          "trainerId": "9",
+          "startTime": "April 29th 2022, 3:01 pm",
+          "endTime": "April 29th 2022, 4:00 pm"
+        }
+      ],
+      "id": 2
     }
   ],
   "users": [
