@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Scheduling app built on react
 
 ## Available Scripts
 
@@ -17,4 +15,5 @@ deploy server before deploying local environment
 ### `npm start`
 
 deploys local env
+
 
